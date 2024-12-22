@@ -1,0 +1,77 @@
+<div class="flex-container">
+
+<div class="flex-item"><h1>item1</h1></div>
+<div class="flex-item"><h1>item2</h1></div>
+<div class="flex-item"><h1>item3</h1></div>
+<div class="flex-item"><h1>item1</h1></div>
+<div class="flex-item"><h1>item2</h1></div>
+<div class="flex-item"><h1>item3</h1></div>
+<div class="flex-item"><h1>item1</h1></div>
+<div class="flex-item"><h1>item2</h1></div>
+<div class="flex-item"><h1>item3</h1></div>
+<div class="flex-item"><h1>item1</h1></div>
+<div class="flex-item"><h1>item2</h1></div>
+<div class="flex-item"><h1>item3</h1></div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.flex-item{
+    
+    
+    background-color: rgb(255, 131, 131);
+}
+
+.flex-container{
+    background:yellow;
+    display: flex;
+    
+    
+    justify-content:flex-start; /*eixo principal*/
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+    flex-flow: row wrap;
+    align-items: center; /*eixo transversal*/ 
+    align-content: center;
+}
+.flex-item:nth-child(1){
+    order:10    
+    
+}
+
+
+
+
+
+</style> 
