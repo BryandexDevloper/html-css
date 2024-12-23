@@ -1,0 +1,22 @@
+    #container{
+     
+        height: 96vh;
+        background-color:purple;
+        padding: 10px;
+        background-image: url(imagens/target001.png);
+        position:relative;  
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+
+    #conteudo{
+        height: 200px;
+        width: 400px;
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,  -50%);
+    }

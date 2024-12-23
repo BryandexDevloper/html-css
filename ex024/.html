@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro do Usuário</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #87CEEB, #4682B4);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.future-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sun {
+    position: absolute;
+    top: 10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 165, 0, 0.8);
+}
+
+.mountains {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    gap: 50px;
+}
+
+.mountain {
+    width: 100px;
+    height: 200px;
+    background: linear-gradient(to top, #4B5320, #6B8E23);
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.code-lines span {
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+    animation: blink 1s infinite;
+}
+
+.code-lines span:nth-child(1) {
+    top: 70%;
+    left: 45%;
+    animation-delay: 0.2s;
+}
+
+.code-lines span:nth-child(2) {
+    top: 72%;
+    left: 48%;
+    animation-delay: 0.4s;
+}
+
+.code-lines span:nth-child(3) {
+    top: 74%;
+    left: 51%;
+    animation-delay: 0.6s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.person {
+    position: relative;
+    bottom: 5%;
+}
+
+.person .head {
+    width: 20px;
+    height: 20px;
+    background: #FDD5B1;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.person .body {
+    width: 15px;
+    height: 30px;
+    background: #000;
+    margin: 0 auto;
+}
+
+.person .laptop {
+    width: 30px;
+    height: 20px;
+    background: #AAA;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.quote {
+    position: absolute;
+    bottom: 2%;
+    font-size: 18px;
+    color: #FFF;
+    text-shadow: 0 0 10px #000;
+    text-align: center;
+    width: 80%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="future-container">
+        <div class="sun"></div>
+        <div class="mountains">
+            <div class="mountain"></div>
+            <div class="mountain"></div>
+        </div>
+        <div class="code-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="person">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="laptop"></div>
+        </div>
+        <p class="quote">"Criando o futuro com código e criatividade."</p>
+    </div>
+</body>
+</html>
