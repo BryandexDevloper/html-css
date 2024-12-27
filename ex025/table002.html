@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalhando com tabelas</title>
+    <style>
+        table{
+           
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        thead th{
+        border: 2px solid rgb(22, 22, 22) ;
+        padding: 20px;
+        background-color: rgba(128, 128, 128, 0.377);
+        
+        }
+
+
+tbody td{
+    border:2px solid rgb(22, 22, 22);
+    padding: 10px;
+    
+}
+
+
+
+tbody .população{
+    text-align: right;
+    color: green;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+tfoot td , th {
+    border:2px solid rgb(22, 22, 22);
+    padding: 10px;
+}
+
+tfoot td{
+    background-color: grey;
+    color: white;
+    text-align: center;
+    
+}
+tbody tr:nth-child(2n){
+    background-color:rgba(128, 128, 128, 0.411);
+}
+
+    </style>
+</head>
+<body>    <!--
+    O atributo scope é usado para indicar a relação entre os cabeçalhos (<th>) e as células (<td>) de uma tabela.
+    - scope="col": Indica que o cabeçalho refere-se à coluna (exemplo: títulos como "Nome", "Idade").
+    - scope="row": Indica que o cabeçalho refere-se à linha (exemplo: nomes ou categorias na lateral da tabela).
+    Isso ajuda tecnologias assistivas a compreenderem a estrutura da tabela.
+    -->
+    
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Posição</th>
+            <th scope="col">Unidades federativas</th>
+            <th scope="col">População</th>
+        </tr>   
+        </thead>
+        <tbody>
+        <tr>
+            <td>1*</td>
+            <td>são paulo</td>
+            <td class="população">45 973 190</td>
+        </tr>
+        <tr>
+            <td>2*</td>
+            <td>Minas-Gerais</td>
+            <td class="população">21 322 692</td>
+        </tr>
+        <tr>
+            <td>3*</td>
+            <td>Rio de janeiro</td>
+            <td class="população">17 219 679</td>
+        </tr>
+        <tr>
+            <td>4*</td>
+            <td>Maranhão</td>
+            <td class="população">29 213 3434</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th scope="row">posição</th>
+            <td scope="row">Unidades Federativas</td>
+            <th scope="row">população</th>
+        </tr>
+        
+        </tfoot>
+    </table>
+</body>
+</html>

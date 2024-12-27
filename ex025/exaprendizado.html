@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova pratica</title>
+    <style>
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body{
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+         table{
+            border-collapse: c;
+            width: 400px;
+            margin: auto;
+            
+        
+        }
+
+
+table th{
+    
+    border: 2px solid rgb(12, 12, 12);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+tbody td {
+    
+    border:2px solid rgba(0, 0, 0, 0.781);
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+thead{
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+
+main{
+   
+    background-color: red;
+
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section #voltar{
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.39);
+    
+    
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    flex: 1;
+    border: 2px solid black;
+}
+
+.pai{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prova table</h1>
+    </header>
+    
+    <main>
+        <section>
+            <table>
+                <thead>
+                 <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                 </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                    <td>bryan</td>
+                    <td>18 anos</td>
+                    <td>São paulo</td>
+                 </tr>
+                 <tr>
+                    <td>marcio</td>
+                    <td>23 anos</td>
+                    <td>São paulo</td>
+                 </tr>
+                 <tr>
+                    <td>Lucas</td>
+                    <td>24 anos</td>
+                    <td>paraiba</td>
+                 </tr>
+                 <tr>
+                    <td>Felipe</td>
+                    <td>50 anos</td>
+                    <td>pernanbuco</td>
+                 </tr>
+                </tbody>
+            </table>
+            <button id="voltar"><a href="#">Voltar ao inicio</a></button>
+            <div class="pai">
+                <div><h1>coluna01</h1></div>
+                <div><h1>coluna02</h1></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
