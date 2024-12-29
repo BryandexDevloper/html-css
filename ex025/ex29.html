@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu cardapio</title>
+    <style>
+
+*{
+    margin: 0;
+}
+
+
+body{
+    
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header{
+    height:100px;
+    width: 100%;
+    background-color:#D9C2A7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color:#F2E2CE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main{
+    
+width: 500px;
+
+height: 400px;
+margin: auto;
+padding: 20px;
+display: flex;
+flex-direction: column;
+    
+}
+
+table{
+    border-collapse:separate ;
+    width: 500px;
+    
+    
+    
+    
+}
+
+table th,td{
+   
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+table th{
+    background-color: grey;
+}
+
+.Valor{
+    text-align: right;
+    padding: 10px;
+    color: green;
+}
+
+button{
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    background-color: #594A3C;
+    
+}
+
+ button a{
+    color: white;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+tbody tr:nth-child(2n){
+    background-color: gray;
+}
+
+footer{
+    text-align: center;
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+@media (max-width:570px){
+    main{
+        width: 350px;
+    }
+
+    table{
+        width: 350px;
+    }
+
+    footer{
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+
+ @media (max-width:400px) {
+
+    
+   header h1{
+font-size: 26px;
+   }
+    
+header p{
+    font-size: 10px;
+}
+
+nav{
+    
+    
+}
+
+nav ul {
+    font-size: 10px;
+    display: flex;
+    gap:20px
+}
+
+main{
+    display: flex;
+    width: 168px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    font-size: 9px;
+    margin: auto;
+}
+
+footer{
+    font-size: 10px;
+}
+
+ }
+
+
+  a{
+    text-decoration: none;
+    color: black;
+ }
+
+ caption{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bolder;
+ }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bom Prato</h1>
+        <p>Seu prato com dignidade e fartura e aqui</p>
+    </header>
+    <nav>
+        <ul>
+            <li>Localização</li>
+            <li>Fichas</li>
+            <li>Horarios</li>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <colgroup>
+            <col class="nome">
+            <col class="Descrição">
+            <col class="Valor">
+
+
+
+            </colgroup>
+            <caption>Cardapio</caption>
+            <thead>
+                <tr>
+                <th>Nome do prato</th>
+                <th>Descrição</th>
+                <th>Valor</th>                
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Parmegiana</a></td>
+                    <td>Frango Empanado</td>
+                    <td class="Valor">R$35,00</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Feijoada Brasileira</a></td>
+                    <td>Fejao preto carne de proco..</td>
+                    <td class="Valor">R$45,00</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Chusrasco</a></td>
+                    <td>Variedades de carnes</td>
+                    <td class="Valor">R$25,00</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Marmita G</a></td>
+                    <td>Arroz feijao Guarbição</td>
+                    <td class="Valor">R$20,00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button"><a href="#">Aperte Aqui</a></button>
+    </main>
+    <footer><p>Bom Prato Fone:xx-xxx-xxxx-xx Endereço:Rua xxx 43 xxx sp x</p></footer>
+</body>
+</html>
