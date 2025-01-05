@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    
+}
+
+thead th{
+border: 2px solid black;
+padding: 10px;
+}
+
+tbody td{
+    border: 1px solid gray;
+    padding: 10px;
+}
+caption{
+    text-align: center;
+    font-weight: bold;
+}
+
+section p {
+    text-indent: 10px;
+}
+
+#botao{
+    background-color: black;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+
+#botao:hover{
+    background-color:grey;
+    color: black;
+
+}
+
+#botao:active {
+    transform: scale(0.95);
+    background-color: darkgray;
+    color: white;
+}
+
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: aliceblue;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    color: red;
+}
+
+@media (max-width:500px){
+    header p{
+        font-size: 12px;
+    }
+
+iframe{
+    width: 200px;
+}
+
+footer{
+    font-size: 12px;
+}
+
+nav ul{
+    gap: 15px;
+}
+
+}
