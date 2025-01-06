@@ -8,48 +8,62 @@
 </head>
 <body>
     <header>
-        <h1>Sistema de Cadastro de Usuarios</h1>
+        <h1>Sistema de Cadastro de Usuários</h1>
     </header>
 <main>
     <section>
-        <form action="Cadastro.php"method="get">
-<p><label for="Nome">Nome:</label> <input type="text" name="Nome" id="Nome" required></p>
-<P><label for="Email">E-mail:</label> <input type="email" name="Email" id="Email" required></P>
-<p><label for="Data">Data de Nascimento</label> <input type="date" name="Data" id="Data" required></p>
-<p><label for="Genero">Genero</label> <select name="Genero" id="Genero" required></p>
-    
-    <option value="Masculino">Masculino</option>
-    <option value="Feminino">Feminino</option>
-    <option value="Nem um">Nem um</option>
-    
-</select>
-<label for="Cadastrar">
-    <p id="Cadastrar"><input type="submit" value="Cadastrar"></p>
-</label>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <!-- Configurações do StaticForms -->
+            <input type="hidden" name="accessKey" value="7712c75b-23d3-452c-9be4-57ea81574140">
+            <input type="hidden" name="emailTo" value="pago9897@gmail.com">
+            <input type="hidden" name="redirectTo" value="https://seusite.com/sucesso">
+            
+            <!-- Campos do Formulário -->
+            <p>
+                <label for="Nome">Nome:</label>
+                <input type="text" name="Nome" id="Nome" required>
+            </p>
+            <p>
+                <label for="Email">E-mail:</label>
+                <input type="email" name="Email" id="Email" required>
+            </p>
+            <p>
+                <label for="Data">Data de Nascimento:</label>
+                <input type="date" name="Data" id="Data" required>
+            </p>
+            <p>
+                <label for="Genero">Gênero:</label>
+                <select name="Genero" id="Genero" required>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Nenhum">Nenhum</option>
+                </select>
+            </p>
+            <p id="Cadastrar">
+                <input type="submit" value="Cadastrar">
+            </p>
         </form>
         <div class="container">
             <table>
-                <caption><p>Cadastro de Usuarios</p></caption>
+                <caption><p>Cadastro de Usuários</p></caption>
                 <thead>
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
                         <th>Data de Nascimento</th>
-                        <th>Genero</th>
+                        <th>Gênero</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            João Carlos
-                        </td>
-                        <td>Joaocarlos@email.com</td>
+                        <td>João Carlos</td>
+                        <td>joaocarlos@email.com</td>
                         <td>19/04/2006</td>
                         <td>Masculino</td>
                     </tr>
                     <tr>
                         <td>Maria Souza</td>
-                        <td>Mariasouza@email.com</td>
+                        <td>mariasouza@email.com</td>
                         <td>18/10/2004</td>
                         <td>Feminino</td>
                     </tr>
@@ -58,7 +72,5 @@
         </div>
     </section>
 </main>
-
-
 </body>
 </html>
