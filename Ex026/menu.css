@@ -552,3 +552,54 @@ height: auto;
     color: white;
     font-size: 14px;
 }
+
+
+.conteudo-roxo{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.condicoes-etc{
+    width: 170px;
+    height: 70px;
+    
+    display: flex;
+    gap:5px
+}
+
+.condicoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.imagem-banner {
+    width: 50%;
+    height: 66px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.imagem-banner img{
+    border-radius: 8px;
+    width: 70%;
+}
+
+.texto-banner{
+    width: 50%;
+    height: 66px;
+    display: flex;
+    
+
+}
+
+.texto-banner span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
