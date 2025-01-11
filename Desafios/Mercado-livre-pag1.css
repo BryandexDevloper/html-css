@@ -160,6 +160,147 @@ header{
 }
 
 
+
+
+#menucelular{
+    display: none;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 134px;
+    background-color: FFE600;
+    border-top: 1px solid grey;
+    padding: 8px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.perfil-foto{
+    display: flex;
+    height: 60px;
+    width: 100%;
+}
+
+.foto-perfil{
+    width: 70px;
+    border-radius: 100%;
+    height: 100%;
+    background-color: grey;
+    margin-right: 16px;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:7px
+}
+
+.buttons-menu{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.buttons-menu a{
+    width: 164px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.navgation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding:20px ;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+ .navgation ul {
+    flex-direction: column;
+    display: flex;
+    gap: 30px;
+    margin-left: -20px;
+    width: 370px;
+        
+ }
+
+ .navgation li{
+        display: flex;
+        width: 100%;
+        
+        gap: 3px;
+        align-items: center;
+       padding: 0px 20px;
+        
+    }
+    .navgation .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:8px;
+    }
+ 
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+
+
+
+.footer{
+   
+        
+    width: 100%;
+    height: 400px;
+   background-image: url('https://http2.mlstatic.com/D_NQ_630907-MLA81498722886_012025-OO.webp');
+   background-position:center;
+   background-size:cover;
+   background-repeat:no-repeat ;
+   display: flex;
+   flex-direction: row;
+   
+   
+}
+
+
+.img2{
+    width: 100%;
+    
+}
+
+
+
+.img-footer{
+    width: 100%;
+    height: 100px;
+    
+    position: absolute;
+    top: 450px;
+    right: 50;
+    background: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+ z-index: 1;
+    backdrop-filter: blur(4px); /* Aplica o desfoque ao fundo */
+}
+
+
 @media(max-width:700px){
     .search{
         width: 350px;
@@ -359,6 +500,27 @@ header{
     justify-content: center;
     align-items: center;
 }
+.footer{
+    width: 100%;
+    height: 171px;
+    background-image: none;
+}
+
+.img-cell-corpo{
+    width: 100%;
+    height:100%;
+    display: flex;
+}
+
+
+
+.img-cell-corpo img{
+    width: 100%;
+}
+
+.img-footer{
+    display: none;
+}
 
 
 
@@ -385,4 +547,12 @@ header{
     .img-cell img{
         display: none;
     }
+    #menucelular{
+        display: none;
+    }
+
+    .img-cell-corpo{
+        display: none;
+    }
 }
+
