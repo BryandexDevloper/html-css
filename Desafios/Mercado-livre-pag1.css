@@ -11,6 +11,7 @@
 
 body{
     height: 100vh;
+    width: 100%;
 }
 
 header{ 
@@ -27,7 +28,7 @@ header{
 .cima{
     width: 1200px;
     height: 50px;
-    
+    gap: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +94,9 @@ header{
     border: none;
     height: 40px;
     padding: 10px;
-    border-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
 }
 
 
@@ -159,6 +162,87 @@ header{
     gap: 8px;
 }
 
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carrosel {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Para que o z-index dos outros elementos funcione */
+    z-index: 1; /* Certifique-se de que isso é menor que os botões */
+    display: flex;
+    overflow: hidden;
+}
+
+.botoes-radio {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: absolute; /* Necessário para sobreposição */
+    z-index: 10; /* Maior que o .carrosel */
+}
+
+.btn1, .btn2 {
+    width: 50px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute; /* Para posicionar sobre a imagem */
+    z-index: 10; /* Certifique-se de que está acima do .carrosel */
+}
+
+.btn1 {
+    left: 0px; /* Ajuste conforme a posição desejada */
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.btn2 {
+    right: 0px; /* Ajuste conforme a posição desejada */
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.radio {
+    position: absolute;
+    bottom: 20px; /* Posiciona a 20px da parte inferior do container */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    font-size: 8px;
+    display: flex;
+    gap: 1px;
+    z-index: 10; /* Também acima do .carrosel */
+}
+
+.radio input[type="radio"] {
+    width: 10px; /* Largura do radio */
+    height: 10px; /* Altura do radio */
+    transform: scale(0.5); /* Ajusta a escala para reduzir o tamanho */
+    accent-color: rgb(52, 132, 250); /* Define a cor do radio (se suportado pelo navegador) */
+    cursor: pointer; /* Para indicar que é clicável */
+}
+
+
+.carrosel img{
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -270,7 +354,7 @@ nav{
         
     width: 100%;
     height: 400px;
-   background-image: url('https://http2.mlstatic.com/D_NQ_630907-MLA81498722886_012025-OO.webp');
+   background-color: red;
    background-position:center;
    background-size:cover;
    background-repeat:no-repeat ;
@@ -301,6 +385,11 @@ nav{
 }
 
 
+
+
+
+
+
 @media(max-width:700px){
     .search{
         width: 350px;
@@ -314,7 +403,7 @@ nav{
         justify-content:center;
         display: flex;
         gap: 40px;
-        width: 700px;
+        width: 100%;
        
     }
 
@@ -324,13 +413,22 @@ nav{
         padding: 0px 40px;
     }
     
-    .categorias{
+    .categorias li:nth-child(8){
+        display: none;
+    }
+
+    .categorias li:nth-child(7){
+        display: none;
+    }
+
+    .categorias li:nth-child(6){
         display: none;
     }
 
     .menu li {
-         display: none;
+        display: none;         
     }
+
 
     .menu{
         display: flex;
@@ -354,12 +452,9 @@ nav{
     padding: 0;
 }
 
-.remov1{
-    display: none;
-}
 
 .remov2{
-    display: none;
+    font-size: 13px;
 }
 .div-texto-cep{
     flex-direction: row;
@@ -411,10 +506,17 @@ nav{
     height: auto;
 }
 
+
+.footer{
+    width: 100%;
     
 }
 
-@media(max-width:370px){
+
+    
+}
+
+@media(max-width:400px){
    header{
     width: 100%;
    }
@@ -437,10 +539,13 @@ nav{
    .search{
     
     width: 220px;
+    display: flex;
+    
    }
 
    #search{
     width: 200px;
+    
    }
 
    .baixo{
@@ -522,11 +627,30 @@ nav{
     display: none;
 }
 
+.remov1{
+    display: none;
+}
+.remov2{
+    display: none;
+}
+
+
+.categorias{
+    display: none;
+}
+
+.svg2-carrinho{
+    display: none;
+}
+
+.carrosel .carrosel-mob{
+    display:none ;
+}
 
 
 }
 
-@media(min-width:370px) and (max-width:1980px){
+@media(min-width:400px) and (max-width:1980px){
     .tablet-text{
         display: none;
         
@@ -534,9 +658,7 @@ nav{
     .container-hamburguer{
         display: none;
     }
-    .svg-carrinho{
-        display: none;
-    }
+    
 
     .icone-seta{
         display: none;
@@ -554,5 +676,16 @@ nav{
     .img-cell-corpo{
         display: none;
     }
+    
+    .svg-carrinho{
+        display: none;
+    }
+
+    .carrosel-mob{
+        display: none;
+    }
+    
+    
+    
 }
 

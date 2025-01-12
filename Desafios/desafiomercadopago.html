@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
                     <li>Cupons</li>
                     <li>Supermercado</li>
                     <li>Moda</li>
-                    <li>Mercado Play</li>
+                    <li>Mercado play</li>
                     <li>Vender</li>
                     <li>Contato</li>
                 </ul>
@@ -162,13 +162,111 @@
     </script>
 <main>
     <div class="footer">
+       <div class="carrosel">
+        <img class="carrosel-pc" src="https://http2.mlstatic.com/D_NQ_630907-MLA81498722886_012025-OO.webp" alt="img-pc">
+        <img class="carrosel-pc" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1734118272001-desk-mainslider-landing.png" alt="" class="carrosel-pc">
+        <img class="carrosel-pc" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1734370165938-desk-mainslider-landing.png" alt="" class="carrosel-pc">
+        <img class="carrosel-pc" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1736345385862-desk-mainslider-landing64.png" alt="" class="carrosel-pc">
+
+
+
+
+
+
+        <img  class="carrosel-mob" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1734118264250-mobile-mainslider-regular.png" alt="mob">
+        <img class="carrosel-mob" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1734370158884-mobile-mainslider-regular.png" alt="" class="carrosel-mob">
+        <img class="carrosel-mob" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1734370188903-mobile-mainslider-regular.png" alt="" class="carrosel-mob">
+        <img class="carrosel-mob" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1735909824882-mobile-mainslider-regular11.png" alt="" class="carrosel-mob">
+
+
+
+
+       </div>
+       <div class="botoes-radio">
+        <div class="btn1"><i class="material-icons" style="color: rgb(52, 132, 250);">chevron_left</i></div>
+        <div class="radio">
+            <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio1">
+        <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio2">
+        <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio3">
+        <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio4">
+        <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio5">
+        <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio6">
+        <label for="Radiof"></label>
+        <input type="radio" name="Radiof" id="Radio7">
         
-        <div class="img-cell-corpo"><img src="imagens/img-footer-mob.webp" alt="foto-mob">
-       
         </div>
-        <div class="img-footer"></div>
+        <div class="btn2"><i class="material-icons" style="color: rgb(52, 132, 250);">chevron_right</i></div>
+       </div>
     </div>
+    
 </main>
+
+<script>
+    // Seleciona os elementos necessários
+const imagensPc = document.querySelectorAll(".carrosel-pc");
+const imagensMob = document.querySelectorAll(".carrosel-mob");
+const radios = document.querySelectorAll(".radio input");
+const btnPrev = document.querySelector(".btn1");
+const btnNext = document.querySelector(".btn2");
+
+// Variáveis de controle
+let indexAtual = 0; // Índice atual da imagem exibida
+const tempoTroca = 3000; // Tempo em milissegundos para troca automática
+const isMobile = window.innerWidth <= 768; // Detecta se é mobile
+
+// Array com as imagens correspondentes
+const imagensAtuais = isMobile ? imagensMob : imagensPc;
+
+// Função para mostrar a imagem atual e atualizar os radios
+function atualizarCarrossel() {
+    // Esconde todas as imagens
+    imagensAtuais.forEach((img, index) => {
+        img.style.display = index === indexAtual ? "block" : "none";
+    });
+
+    // Atualiza o estado dos radios
+    radios.forEach((radio, index) => {
+        radio.checked = index === indexAtual;
+    });
+}
+
+// Função para avançar uma imagem
+function avancarImagem() {
+    indexAtual = (indexAtual + 1) % imagensAtuais.length; // Vai para a próxima imagem
+    atualizarCarrossel();
+}
+
+// Função para voltar uma imagem
+function voltarImagem() {
+    indexAtual = (indexAtual - 1 + imagensAtuais.length) % imagensAtuais.length; // Volta para a imagem anterior
+    atualizarCarrossel();
+}
+
+// Adiciona eventos aos botões de navegação
+btnNext.addEventListener("click", avancarImagem);
+btnPrev.addEventListener("click", voltarImagem);
+
+// Adiciona evento aos radios para navegar manualmente
+radios.forEach((radio, index) => {
+    radio.addEventListener("change", () => {
+        indexAtual = index; // Atualiza o índice com o radio selecionado
+        atualizarCarrossel();
+    });
+});
+
+// Troca automática de imagens
+setInterval(avancarImagem, tempoTroca);
+
+// Inicializa o carrossel
+atualizarCarrossel();
+
+</script>
    
 </body>
 </html>
