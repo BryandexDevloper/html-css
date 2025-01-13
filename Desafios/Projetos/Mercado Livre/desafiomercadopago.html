@@ -16,8 +16,11 @@
                 <img src="imagens/th-removebg-preview.png" alt="">
             </div>
             <div class="img">
-                    <img src="imagens/Captura de tela_6-1-2025_1544_www.mercadolivre.com.br.jpeg" alt="">
-            </div>    
+                
+                <picture>
+                    <source media="(max-width:700px)" srcset="C:\Users\adria\Downloads\projeto\arquivos de estudo\estudos\Meusprojetos\ex022\html-css\Desafios\imagens\th-removebg-preview.png">
+                    <img src="imagens/Captura de tela_6-1-2025_1544_www.mercadolivre.com.br.jpeg" alt=""></div>
+                </picture>
             <div class="search">
                 <label for="search"></label>
                 <input type="search" name="Barra-de-pesquisa" id="search" placeholder="Buscar produtos, marcas e muito mais…">
@@ -89,6 +92,8 @@
             </div>
         </div>
     </header>
+
+    <!--Area Menu celular-->
     <div id="menucelular">
         <nav id="sua-conta">
             <div class="perfil-foto">
@@ -138,25 +143,8 @@
             </ul>
         </div>
     </div>
-    <script>
-        function clickMenu() {
-            // Seleciona o elemento do menu
-            const menucelular = document.getElementById('menucelular');
-            
-            // Verifica se o elemento existe
-            if (!menucelular) {
-                console.error('Elemento com o ID "menucelular" não encontrado.');
-                return;
-            }
-    
-            // Alterna a exibição do menu
-            if (menucelular.style.display === 'block') {
-                menucelular.style.display = 'none';
-            } else {
-                menucelular.style.display = 'block';
-            }
-        }
-    </script>
+<!--Fim area menu celular-->
+
 <main>
     <div class="footer">
        <div class="carrosel">
@@ -201,8 +189,134 @@
         <div class="btn2"><i class="material-icons" style="color: rgb(52, 132, 250);">chevron_right</i></div>
        </div>
     </div>
+  <!--Area frete gratis mobile-->
+    <div class="container-celular-frete-gratis">
+        <div><svg fill="#00a650" width="20px" height="40px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#00a650"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2.84375 13C1.285156 13 0 14.285156 0 15.84375L0 42C0 43.660156 1.339844 45 3 45L7.09375 45C7.570313 47.835938 10.035156 50 13 50C15.964844 50 18.429688 47.835938 18.90625 45L28.15625 45C28.894531 45 29.554688 44.6875 30.0625 44.21875C30.582031 44.675781 31.246094 44.992188 32 45L33.09375 45C33.570313 47.835938 36.035156 50 39 50C42.300781 50 45 47.300781 45 44C45 40.699219 42.300781 38 39 38C36.035156 38 33.570313 40.164063 33.09375 43L32 43C31.8125 43 31.527344 42.871094 31.3125 42.65625C31.097656 42.441406 31 42.183594 31 42L31 23C31 22.625 31.625 22 32 22L40 22C40.785156 22 41.890625 22.839844 42.65625 23.75C42.664063 23.761719 42.679688 23.769531 42.6875 23.78125L42.84375 24L38 24C36.40625 24 35 25.289063 35 27L35 31C35 31.832031 35.375 32.5625 35.90625 33.09375C36.4375 33.625 37.167969 34 38 34L48 34L48 42C48 42.375 47.375 43 47 43L45 43L45 45L47 45C48.660156 45 50 43.660156 50 42L50 32.375C50 30.085938 48.40625 28.0625 48.40625 28.0625L48.375 28.0625L44.25 22.5625L44.25 22.53125L44.21875 22.5C43.296875 21.386719 41.914063 20 40 20L32 20C31.644531 20 31.316406 20.074219 31 20.1875L31 15.90625C31 14.371094 29.789063 13 28.1875 13 Z M 2.84375 15L28.1875 15C28.617188 15 29 15.414063 29 15.90625L29 42.15625C29 42.625 28.628906 43 28.15625 43L18.90625 43C18.429688 40.164063 15.964844 38 13 38C10.035156 38 7.570313 40.164063 7.09375 43L3 43C2.625 43 2 42.371094 2 42L2 15.84375C2 15.375 2.367188 15 2.84375 15 Z M 38 26L44.34375 26L46.78125 29.25C46.78125 29.25 47.6875 30.800781 47.875 32L38 32C37.832031 32 37.5625 31.875 37.34375 31.65625C37.125 31.4375 37 31.167969 37 31L37 27C37 26.496094 37.59375 26 38 26 Z M 13 40C15.222656 40 17 41.777344 17 44C17 46.222656 15.222656 48 13 48C10.777344 48 9 46.222656 9 44C9 41.777344 10.777344 40 13 40 Z M 39 40C41.222656 40 43 41.777344 43 44C43 46.222656 41.222656 48 39 48C36.777344 48 35 46.222656 35 44C35 41.777344 36.777344 40 39 40Z"></path></g></svg></div>
+        <span><p>Frete grátis</p></span><p>por ser sua primeira compra*</p>
+    </div>
     
+    <!--Fim area frete gratis mobile-->
+<div class="blur"></div>
+
+<!--Area Informações-->
+<section id="sec1">
+    <div class="mini-container">
+        <div class="h2"><h2>Frete Gratis</h2></div>
+        <div class=" mini-container-img"><img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/new-buyer.svg" alt="Frete-gratis"></div>
+        <div class="paragrafo">Benefício por ser sua primeira compra.</div>
+        <div class="btn"><a href="#">Mostrar mais Produtos</a></div>
+    </div>
+    <div class="mini-container">
+        <div class="h2" style="margin: 0; text-align: center;"><h2>Insira sua localização</h2></div>
+        <div class=" mini-container-img"><img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/location.svg" alt="localização"></div>
+        <div class="paragrafo">Confira os custos e prazos de entrega.</div>
+        <div class="btn"><a href="#">Inserir localização</a></div>
+    </div>
+    <div class="mini-container">
+        <div class="h2"><h2>Entre na sua conta</h2></div>
+        <div class=" mini-container-img"><img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/registration-da.svg" alt="Sua conta"></div>
+        <div class="paragrafo">Aproveite ofertas para comprar tudo que quiser.</div>
+        <div class="btn"><a href="#">Entrar na sua conta</a></div>
+    </div>
+    <div class="mini-container">
+        <div class="h2" style="display: flex; justify-content:left; margin:0; padding: 0 9px;"><h2>Meios de pagamento</h2></div>
+        <div class=" mini-container-img"><img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/payment-methods.svg" alt="Formas de pagamento"></div>
+        <div class="paragrafo">Pague suas compras com rapidez e segurança.</div>
+        <div class="btn"><a href="#">Mostrar meios</a></div>
+    </div>
+    <div class="mini-container">
+        <div class="h2"><h2>Menos de <strong>R$100</strong></h2></div>
+        <div class=" mini-container-img"><img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/mlb-low-price-product.svg" alt="Meios de pagamento"></div>
+        <div class="paragrafo">Benefício por ser sua primeira compra.</div>
+        <div class="btn"><a href="#">Mostrar produtos</a></div>
+    </div>
+    <div class="mini-container">
+        <div class="h2"><h2>Compra garantida</h2></div>
+        <div class=" mini-container-img"><img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/buy-protected.svg" alt="Compra garantida"></div>
+        <div class="paragrafo">Você pode devolver sua compra grátis.</div>
+        <div class="btn"><a href="#">Como funciona</a></div>
+    </div>
+</section><!--AREA Informações-->
+
+<section class="categorias-celular">
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/quick_access/home_row_mercado_pago_carousel_mobile.webp" alt="">
+        </div>
+        <p>Mercado<br>Pago</p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/quick_access/home_row_ofertas_carousel_mobile.webp" alt="">
+        </div>
+        <p>Ofertas</p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha" style="box-shadow: inset 0px 0px 0px 2px rgb(4, 255, 0);">
+            <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/quick_access/home_row_mplay_black_carousel_mobile.webp" alt="">
+        </div>
+        <p>Mercado <br>Play</p>
+        <span class="gratis2" style="font-size: 13px; text-align: center;">Gratis</span>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+    <div class="bolinha-categoria">
+        <div class="bolinha">
+            <img src="" alt="">
+        </div>
+        <p></p>
+    </div>
+</section>
+
 </main>
+
+
+<!--Script Carrosel de imagens-->
 
 <script>
     // Seleciona os elementos necessários
@@ -264,6 +378,33 @@ setInterval(avancarImagem, tempoTroca);
 atualizarCarrossel();
 
 </script>
+
+<!--Fim script carrossel de imagens-->
+
+
+<!--Script Menu Hamburguer-->
+
+<script>
+    function clickMenu() {
+        // Seleciona o elemento do menu
+        const menucelular = document.getElementById('menucelular');
+        
+        // Verifica se o elemento existe
+        if (!menucelular) {
+            console.error('Elemento com o ID "menucelular" não encontrado.');
+            return;
+        }
+
+        // Alterna a exibição do menu
+        if (menucelular.style.display === 'block') {
+            menucelular.style.display = 'none';
+        } else {
+            menucelular.style.display = 'block';
+        }
+    }
+</script>
+
+<!--Fim script menu-->
    
 </body>
 </html>
