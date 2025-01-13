@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+</head>
+<body>
+    <h1>Produto X</h1>
+    <p>Descrição do produto aqui.</p>
+    <button onclick="redirectToForm()">Comprar Agora</button>
+
+    <script>
+        function redirectToForm() {
+            // Redireciona para a página do formulário
+            window.location.href = "formulario.html";
+        }
+    </script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Endereço</title>
+</head>
+<body>
+    <h1>Preencha seu Endereço</h1>
+    <form onsubmit="redirectToPurchase(event)">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+        <br><br>
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address" placeholder="Digite seu endereço" required>
+        <br><br>
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone" required>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function redirectToPurchase(event) {
+            event.preventDefault(); // Evita o recarregamento da página ao enviar o formulário
+
+            // Aqui você pode validar os dados se necessário
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+
+            // Opcional: Salvar os dados no localStorage ou enviar para um servidor
+            console.log({ name, address, phone });
+
+            // Redirecionar para o link de compra
+            window.location.href = "https://www.linkdecompra.com";
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

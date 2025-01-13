@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS 004</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+<h1>Exemplo de forms</h1>
+
+<form action="cadastro.php" method="get">
+
+<fieldset>
+    <legend>Sexo</legend>
+    <input type="radio" name="Sexo" id="Masculino" ><label for="Masculino">Masculino</label><br>
+    <input type="radio" name="Sexo" id="Feminino" required checked><label for="Feminino">Feminino</label>
+</fieldset>
+
+<fieldset>
+    <legend>Esportes Favoritos</legend>
+  
+        
+        <input type="checkbox" name="Futebol" id="Futebol"><label for="Futebol">Futebol</label><br>
+        <input type="checkbox" name="Tenis" id="Tenis"><label for="Tenis">Tenis</label><br>
+        <input type="checkbox" name="Natação" id="Natação"><label for="Natação">Natação</label><br>
+        <input type="checkbox" name="Golf" id="Golf"><label for="Golf">Golf</label><br>
+   
+</fieldset>
+
+
+    <input type="reset" value="Limpar">
+    <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>

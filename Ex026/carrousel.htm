@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel</title>
+    <style>
+        .carrousel {
+            display: flex;
+            gap: 16px; /* Espaçamento entre os itens */
+            width: 1180px;
+            height: 500px;
+            overflow-x: hidden; /* Permite rolar se necessário */
+        }
+
+        .area-produtos {
+            width: 300px; /* Define a largura fixa para os itens */
+            flex-shrink: 0; /* Evita que os itens diminuam */
+            border: 1px solid #ddd;
+            padding: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .foto-produto img {
+            width: 100%; /* Imagem responsiva */
+            height: auto;
+        }
+
+        .titulo-preco {
+            margin-top: 8px;
+        }
+
+        .titulo-preco a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .promo, .valor-desconto, .parcelado, .frete-gratis {
+            margin-top: 4px;
+        }
+
+        .frete-verde {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="carrousel">
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <div class="area-produtos">
+            <div class="foto-produto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp" alt="Teclado-img">
+            </div>
+            <div class="titulo-preco">
+                <a href="#">Kit Teclado E Mouse Sem Fio 2.4ghz Multimidia Usb...</a>https://http2.mlstatic.com/D_Q_NP_2X_832493-MLU75438030004_042024-T.webp
+                <div class="promo"><span style="font-size: 12px;"><s>R$118,63</s></span></div>
+                <div class="valor-desconto"><span class="cifrao">R$ </span><span class="valor">97</span><span class="centavos"> 99</span><span class="desconto"> 18% OFF</span></div>
+                <div class="parcelado"><span class="em">em</span> <span class="vezes">12x</span> <span class="parcelado">R$ 9,54</span></div>
+                <div class="frete-gratis"><span class="frete-verde">Frete grátis</span> <span class="restante">por ser sua primeira compra</span></div>
+            </div>
+        </div>
+        <!-- Repita a estrutura acima para mais produtos -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form007</title>
+</head>
+<body>
+
+    <h1>Exemplo de formulario  </h1>
+    <form action="cadastro.php" method="get">
+<p>
+    <label for="Estado">Estado</label>
+    <select name="Estado" id="Estado">
+        <optgroup label="Regiao Sudeste">
+            <option value="Sp">São Paulo</option>
+            <option value="MG">Minas gerais</option>
+            <option value="Rj">Rio de Janeiro</option>
+        </optgroup>
+
+        <optgroup label="Regiao Nordeste">
+            <option value="CE">Ceara</option>
+            <option value="BA">Bahia</option>
+        </optgroup>
+    </select>
+</p>
+<p>
+<label for="Prof">Profição</label>
+<input type="text" name="Prof" id="Prof" list="Lista">
+<datalist id="Lista">
+    <option value="Professor">PRODESSOR</option>
+    <option value="DEV">DESENVOLVEDOR</option>
+    <option value="Açogueiro">AÇO</option>
+</datalist>
+</p>
+
+
+<p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+</p>
+
+    </form>
+
+
+
+</body>
+</html>
