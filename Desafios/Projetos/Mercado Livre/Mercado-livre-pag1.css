@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
+/**ASS:magodopix**/
 
 *{
     padding: 0;
@@ -13,6 +13,10 @@ body{
     height: 100vh;
     width: 100%;
     background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    
+   
     
 }
 
@@ -24,6 +28,18 @@ main{
     flex-direction: column;
 }
 
+.alinhamento-conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    z-index: 10;
+    position: relative;
+    top: 350px;
+    width: 100%;
+}
 
 header{ 
     width: 100%;
@@ -163,7 +179,7 @@ header{
 .categorias{
     width: 588px;
     height: 40px;
-    
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,6 +192,46 @@ header{
     gap: 8px;
     align-items: center;
     justify-content: center;
+}
+
+.submenu {
+    
+    display: none; /* Submenu oculto por padrão */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:transparent ;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    
+    z-index: 100;
+    color: transparent;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.submenu li {
+    padding: 10px;
+    white-space:wrap;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submenu li:hover {
+    background-color:#0084ff;
+    width: 100px;
+    color: white;
+    width: 100%;
+}
+
+.categorias li:hover > .submenu {
+    display: block; /* Mostra o submenu ao passar o mouse */
+    background-color: rgb(26, 25, 25);
+    color: white;
+    padding: 20px 0px;
+    width: 200px;
+
 }
 
 /** Fim div Categorias**/
@@ -198,6 +254,7 @@ header{
     list-style: none;
     gap: 8px;
 }
+
 
 /**Fim div menu**/
 
@@ -442,9 +499,7 @@ nav{
 #sec1{
     display: flex;
     gap: 15px;
-    position: relative;
-    bottom:-300px;
-    z-index: 1;
+    
     align-items: center;
     justify-content: center;
     overflow-x:auto;
@@ -454,6 +509,30 @@ nav{
     
 }
 
+#sec3{
+    height: 450px;
+    background-color: #fff0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;    
+}
+
+
+
+#sec4{
+    width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
 
 
 
@@ -563,13 +642,11 @@ nav{
 
 .categorias-celular{
     width: 98%;
-    height:93px;
+    height:60px;
     overflow-y: hidden;
-    position: relative;
-    left: 49%;
-    transform: translate(-50%);
-    bottom:100px ;
-    z-index: 1;
+    
+    
+   
     display: flex;
    justify-content: center;
     gap: 5px;
@@ -582,11 +659,13 @@ nav{
     background-color: white;
     border-radius: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bolinha img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .bolinha-categoria p{
@@ -595,21 +674,338 @@ text-align: center;
 height: 100%;
 }
 
-.gratis2{
-    background-color: #00a650;
-    width: 50px;
-    position: absolute;
-    top: 43px;
-    z-index: 3;
-    right:393px;
-    border-radius: 20px;
-   
+
+/**produtos sec3**/
+
+.container-produtos{
+    width: 1170px;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius:8px ;
+    justify-content: center;
+    
 }
 
 
 
+.produtos {
+    width: 1170px;
+    height: auto;
+    overflow-x: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-y: hidden;
+
+}
+
+.titulo-mais{
+    
+   
+    height: 50px;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    padding: 0px 23px;
+}
+
+.area-produtos{
+    
+    width: 173.33px;
+    height: 355.33px;
+}
+
+.foto-produto{
+    width: 173.33px;
+    height: 173.33px;
+    
+}
+
+.titulo-preco{
+    width: 173.33px;
+    height: 178px;
+   
+}
+
+.titulo-preco a {
+    text-decoration: none;
+    margin:16px 0;
+}
+
+.foto-produto img{
+    width: 100%;
+    height: auto;
+}
+
+.cifrao{
+    font-size: 24px;
+}
+
+.valor{
+    font-size: 24px;
+    margin-left:5px;
+}
+.centavos{
+    font-size: 12px;
+    position: relative;
+    bottom: 5px;
+    
+}
+
+.desconto{
+
+    font-size: 14px;
+    margin-left: 8px;
+    color: rgb(0, 166, 80);
+    font-weight: 400;
+}
+
+.valor-desconto{
+    display: flex;
+    align-items: center;
+}
+
+.frete-verde{
+    color:rgb(0, 166, 80)
+}
+.frete-gratis{
+    margin-top: 8px;
+}
+
+.restante{
+    color: #737373;
+}
+
+#titulo-produto{
+    color: black;
+    
+}
+.promo{
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+
+
+/** Banners sec4 eletroluz**/
+
+.banners{
+    width: 1180px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.banner1{
+    width: 582px;
+    height: 130px;
+    
+    display: flex;
+    justify-content: space-between;
+    background-color: #E6E4E5;
+    
+}
+
+.banner2{
+    width: 582px;
+    height: 130px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/**Conteudo dos Banners**/
+
+.palavras{
+    width: 334px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.foto-perfume{
+    width: 230px;
+    height: 130px;
+    display: flex;
+}
+
+.foto-perfume img{
+    width: 100%;
+    height: auto;
+}
+
+/**conteudo dos banners 2**/
+
+.texto1{
+width: 376.09px;
+height: 130px;
+background-color: #0084ff;
+display: flex;
+justify-content:center;
+align-items: center;
+gap: 30px;
+}
+.foto1{
+width: 205.91px;
+height: 130px;
+display: flex;
+background-color: yellow;
+}
+
+.foto1 img{
+    width: 100%;
+    height: auto;
+}
+
+.eletro div{
+    width: 56px;
+    height: auto;
+}
+
+.eletro img {
+    width: 100%;
+}
+
+.palavras2{
+    
+    width: 120px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+/**conteudo meli+ banner**/
+
+.banner-meli-mais{
+    width: 1180px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meli{
+    width: 1180px;
+    background-color: white;
+    border-radius: 8px;
+    height: 212px;
+
+    
+}
+
+.roxo{
+    width: 1180px;
+    height: 70px;
+    border-radius: 8px 8px 0px 0px ;
+    background-image: linear-gradient(to right,#64218D 40%,#a71292);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    padding: 20px;
+}
+
+.meli-img-titulo img{
+width: 60px;
+height: auto;
+}
+
+.meli-img-titulo{
+    display: flex;
+    align-items: center;
+    gap: 10;
+    width: 50%;
+   
+}
+.botao{
+ width: 120px;
+ background-color: rgba(255, 255, 255, 0.26);
+ height: 32px;
+ align-items: center;
+ justify-content: center;
+ display: flex;  
+ border-radius: 5px;
+ 
+}
+.botao a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+
+.conteudo-roxo{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.condicoes-etc{
+    width: 170px;
+    height: 70px;
+    
+    display: flex;
+    gap:5px
+}
+
+.condicoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.imagem-banner {
+    width: 50%;
+    height: 66px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.imagem-banner img{
+    border-radius: 8px;
+    width: 70%;
+}
+
+.texto-banner{
+    width: 50%;
+    height: 66px;
+    display: flex;
+    
+
+}
+
+.texto-banner span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /** Fim bolinha de categorias celular**/
+
+
+
+
+
+
 
 @media(max-width:700px){
    
@@ -920,9 +1316,25 @@ height: 100%;
 /**area carrosel com botao compra frete gratis localizaçao etc..**/
 
 #sec1{
-    height: 212;
-    
+    height: auto;
+}
 
+.alinhamento-conteudo{
+    position: relative;
+    top:180px;
+    padding: 5px;
+}
+
+
+#sec3{
+   
+    height: 450px;
+    width: 100%;
+    
+}
+
+#sec4{
+    display: none;
 }
 
 .mini-container{
@@ -953,6 +1365,96 @@ height: 100%;
 .carousel::-webkit-scrollbar {
     display: none;
 }
+
+
+
+/**produtos sec3**/
+
+.produtos{
+    height:500px;
+    max-width: 100%;
+    
+
+}
+    
+.container-produtos{
+    width: 100%;
+    max-width:370px;
+    height: 450px;
+    padding: 0px 10px;
+    
+}
+
+/**banner off meli mais pc **/
+
+.banner-meli-mais{
+    display: none;
+}
+ 
+
+.container-banner-roxo-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.roxo-mobile{
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(to right,#64218D 60%,#a71292 );
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+}
+
+
+.img-meli-mobile img{
+    width: 25%;
+    
+}
+.img-meli-mobile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.traco-branco-meli-mobile{
+    height: 40px;
+    width: 2px;
+    background-color: white;
+}
+
+.conteudo-roxo-mobile{
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.conteudo-roxo-mobile-sessao1{
+    display: flex;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+   
+
+.imagem-banner-mobile-meli img{
+    width: 50px;
+}
+
 
 /**Fim do media quieres celular**/
 
@@ -1002,8 +1504,13 @@ height: 100%;
         display: none;
     }
     
+    .categorias-celular{
+        display: none;
+    }
     
-    
+    .container-banner-roxo-mobile{
+        display: none;
+    }
 }
 
 /** fim do Media quieres para tirar itens da tela do pc vvvv **/
