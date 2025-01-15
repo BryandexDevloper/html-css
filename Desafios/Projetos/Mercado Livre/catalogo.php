@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="Mercado-livre-pag1.css">
+
+
 <?php
 // Configurações do banco de dados
 $servidor = "localhost";
