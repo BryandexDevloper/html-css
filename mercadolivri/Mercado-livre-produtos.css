@@ -1,0 +1,86 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**conteiner das fotos e informaçoes comprar etc...**/
+.pag-produtos{
+    margin-top: 160px;
+    width: 1180px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.foto-produto-galeria{
+    width: 784px;
+    height: 572px;
+    border: 1px solid;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    
+}
+
+.informacoes-comprar{
+    width: 376px;
+    height: auto;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+   
+
+}
+ /** fim conteiner das fotos e informaçoes comprar etc...**/
+/**area da foto do produto com as img grande e as caixa pequenas**/
+.caixa-foto-produto{
+    border: 1px solid;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 384px; 
+    }
+    
+.foto-produto-comprar{
+    display: flex;
+    border: 1px solid grey;
+    width: 70px;
+    height: 60px;
+}
+
+.foto-produto-comprar img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.foto-grande-produto{
+    width: 680px;
+    height: 504px;
+    border: 1px solid;
+}
+
+/** fim area da foto do produto com as img grande e as caixa pequenas**/
+
+.container-informacoes{
+width: 352px;
+height: 945px;
+border: 1px solid grey;
+border-radius: 10px;
+
+}

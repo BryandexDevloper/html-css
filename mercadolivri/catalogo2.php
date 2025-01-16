@@ -1,7 +1,4 @@
 
-
-
-
 <?php
 // Configurações do banco de dados
 $servidor = "localhost";
@@ -21,14 +18,6 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM catalogo_produtos";
 $resultado = $conn->query($sql);
 ?>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -37,6 +26,8 @@ $resultado = $conn->query($sql);
     <title>Mercado livre brasil - frete gratis no mesmo dia</title>
     <link rel="stylesheet" href="Mercado-livre-pag1.css" media="screen">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Mercado-livre-pag1.css">
+
 </head>
 
 <body>
@@ -361,7 +352,14 @@ $resultado = $conn->query($sql);
         
     </section><!--AREA Informações-->
     
-    <?php
+ 
+
+<section id="sec3">
+    <div class="container-produtos">
+        <h2 class="titulo-mais">Inspirado no último visto</h2>
+        <div class="produtos">
+
+        <?php
     if ($resultado->num_rows > 0) {
         while ($linha = $resultado->fetch_assoc()) {
             // Validação dos dados do banco
@@ -371,6 +369,7 @@ $resultado = $conn->query($sql);
             $parcelado_em = isset($linha["parcelado_em"]) ? $linha["parcelado_em"] : 0;
             $valor_parcela = isset($linha["valor_parcela"]) ? $linha["valor_parcela"] : 0;
             $frete_gratis = isset($linha["frete_gratis"]) ? $linha["frete_gratis"] : false;
+            
 
             // HTML para exibir os produtos
             echo "<div class='area-produtos'>";
@@ -378,8 +377,8 @@ $resultado = $conn->query($sql);
             echo "        <img src='" . htmlspecialchars($linha["imagem_url"]) . "' alt='Produto'>";
             echo "    </div>";
             echo "    <div class='titulo-preco'>";
-            echo "        <a href='#' class='titulo-produto'>" . htmlspecialchars($linha["nome"]) . "</a>";
-            echo "        <div class='promo'><s>R$" . $preco_antigo . "</s></div>"; // Sem formatação de moeda
+            echo "        <a href='#' class='titulo-produto' style='color: black;'>" . htmlspecialchars($linha["nome"]) . "</a>"; // Nome do produto em preto
+            echo "        <div class='promo' style='color:#808080;'><s>R$" . $preco_antigo . "</s></div>"; // Sem formatação de moeda
             echo "        <div class='valor-desconto'>"; 
             echo "            <span class='cifrao'>R$</span><span class='valor'>" . $preco_atual . "</span>"; // Sem formatação de moeda
             echo "            <span class='desconto'>" . htmlspecialchars($desconto) . "% OFF</span>";
@@ -387,7 +386,7 @@ $resultado = $conn->query($sql);
             echo "        <div class='parcelado'>";
             echo "            <span>em " . htmlspecialchars($parcelado_em) . "x R$" . $valor_parcela . "</span>"; // Sem formatação de moeda
             echo "        </div>";
-            echo "        <div class='frete-gratis'>";
+            echo "        <div class='frete-gratis'>"; 
             echo $frete_gratis ? "<span class='frete-verde'>Frete grátis por ser sua primeira compra</span>" : "<span class='frete-verde'>Frete não incluso</span>";
             echo "        </div>";
             echo "    </div>";
@@ -396,7 +395,11 @@ $resultado = $conn->query($sql);
     } else {
         echo "<p>Nenhum produto encontrado.</p>";
     }
-    ?>
+?>
+
+        </div>  <!-- Fim da div de produtos -->
+    </div>  <!-- Fim da div de container-produtos -->
+</section>  <!-- Fim da seção -->
     
     <section id="sec4">
         <div class="banners">
