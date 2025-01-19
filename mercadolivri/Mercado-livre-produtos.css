@@ -19,7 +19,7 @@ main{
 
 /**conteiner das fotos e informaçoes comprar etc...**/
 .pag-produtos{
-    margin-top: 1000px;
+    margin-top: 6200px;
     width: 1180px;
     min-height: auto;
     display: flex;
@@ -87,7 +87,7 @@ main{
 
 .container-foto-grande{
     width: 680px;
-    height: 1800px;
+    height: 7000px;
     border: 1px solid;
     display: flex;
     flex-direction: column;
@@ -234,10 +234,12 @@ padding-right: 3px;
     width: 300px;
     border: 1px solid grey;
     border-radius: 10px;
-    align-items: center;
-    
-    
+    align-items: center;  
 }
+.container-produto-do-vendedor-recomendado:hover{
+    box-shadow: 0px 0px 10px .7px rgba(0, 0, 0, 0.39);
+}
+
 
 .foto-produto-vendedor{
     width: 150px;
@@ -251,6 +253,35 @@ padding-right: 3px;
     flex-direction: column;
     padding: 10px;
 }
+
+
+
+.container-enviar-pergunta{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container-enviar-pergunta a{
+    text-decoration: none;
+    color: white;
+    background-color: #3483FA;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight:500;
+}
+
+#envie{
+    width: 530px;
+    height: 45px;
+    border-radius: 5px;
+    padding: 12px;
+    display: flex;
+    
+   
+}
+
 
 /**CONTAINER PRODUTOS RELACIONADOS**/
 
@@ -288,6 +319,126 @@ padding: 10px;
     display: flex;
     flex-direction: column;
 }
+
+.caracetisticas-produto-tablea{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+table{
+    margin-top: 20px;
+    width: 360px;
+    height: 240px;
+    border: 1px solid #EBEBEB;
+    border-collapse: separate;
+    border-radius: 10px;
+    border-spacing:0;
+
+    
+    
+}
+
+tr:nth-child(odd){
+    background-color: #EBEBEB;
+      
+}
+
+th{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+  
+}
+
+td{
+    font-size: 12px;
+}
+
+
+caption{
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+
+.container-descircao-produto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+}
+
+
+.container-quem-viu-comprou{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.container-perguntas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+
+.container-botoes-perguntas{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.container-botoes-perguntas a{
+    background-color: #e3edfb;
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color:#3483FA ;
+    font-size: 12px;
+}
+
+.container-ultimas-perguntas-feitas{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.container-opnioes-do-produto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid;
+}
+
+.container-estrelas{
+    display: flex;
+}
+
+.avaliacao-estrelas{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.container-avaliacao-opiniao{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+
+
+
+
 
 
 /**se e nvovo ou usado e quantas vendas tem**/
