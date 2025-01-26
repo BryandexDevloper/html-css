@@ -15,11 +15,13 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    height: 8000px;
 }
 
 /**conteiner das fotos e informaçoes comprar etc...**/
 .pag-produtos{
-    margin-top: 6200px;
+    margin-top: 30px;
     width: 1180px;
     min-height: auto;
     display: flex;
@@ -87,10 +89,10 @@ main{
 
 .container-foto-grande{
     width: 680px;
-    height: 7000px;
-    border: 1px solid;
+    height: 4000px;
     display: flex;
     flex-direction: column;
+    
 }
 
 /** fim area da foto do produto com as img grande e as caixa pequenas**/
@@ -334,10 +336,7 @@ table{
     border: 1px solid #EBEBEB;
     border-collapse: separate;
     border-radius: 10px;
-    border-spacing:0;
-
-    
-    
+    border-spacing:0;   
 }
 
 tr:nth-child(odd){
@@ -421,6 +420,7 @@ caption{
 
 .container-estrelas{
     display: flex;
+    gap: 10px;
 }
 
 .avaliacao-estrelas{
@@ -433,10 +433,50 @@ caption{
     display: flex;
     justify-content: space-between;
     width: 50%;
+    margin-top: 20px;
 }
 
+.estrelas-texto{
+    display: flex;
+    flex-direction: column;
+}
 
+.container-barra-carregamento-avaliacao{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
 
+.melhores-avaliacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.container-quem-comprou-tambem-viu{
+    display: flex;
+    flex-direction: column;
+    width: 1180px;
+   height: auto;
+
+}
+
+.container-anuncio-oralb{
+    width: 1180px;
+    height: 250px;
+    display: flex;
+    
+    
+}
+
+.container-anuncio-oralb img{
+    width: 100%;
+    object-fit: cover;
+}
+        
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
 
@@ -659,3 +699,22 @@ caption{
     background-color: #E3EDFB;
     color:#3483FA;
 }
+
+
+
+.container-metodo-pagamento{
+    width: 350px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.meios-pagamento{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
