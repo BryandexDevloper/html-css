@@ -467,6 +467,9 @@ caption{
     width: 1180px;
     height: 250px;
     display: flex;
+    background-color: black;
+    color: white;
+    
     
     
 }
@@ -475,7 +478,24 @@ caption{
     width: 100%;
     object-fit: cover;
 }
-        
+   
+
+
+.container-produtos-mais-procurados{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.item-list {
+    color: grey;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+  
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
