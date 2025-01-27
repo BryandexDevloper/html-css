@@ -857,12 +857,74 @@
         <div class="item-list">
             Apple Watch - Ar Condicionado - Ar Condicionado Inverter - Bicicletas - Cafeteira - Carros Novos - Carros Usados - Computador - Fogão 4 Bocas - Fone De Ouvido Bluetooth - Freezer Vertical - Geladeira Frost Free - Guarda Roupa Casal - Guarda Roupa Solteiro - iPad - iPhone - iPhone 8 Plus - iPhone 11 - iPhone 13 - iPhone 13 Pro Max - iPhone 14 - iPhone 14 Pro - iPhone 14 Pro Max - iPhone 15 - iPhone 16 - iPhone 16 Plus - iPhone 16 Pro - iPhone 16 Pro Max - JBL - Microondas - Monitor - Motorola - Nintendo Switch - Notebook - Notebook Dell - Painel Para TV - Penteadeira - Poco X5 Pro - PS4 - PS5 - Redmi Note 12 - S22 Ultra - Samsung A54 - Samsung S23 - Smartwatch - Tablets Samsung - Tênis Masculino - Tênis Feminino - TV 32 Polegadas - TV 50 4K - TV 50 Polegadas - Ventilador - Xbox - Xiaomi.
           </div>
-        <h3>Pesquise produto por letra inicial</h3>          
+        <h3 style="font-weight: 500;font-size: 14px;margin-top: 20px;">Pesquise produto por letra inicial</h3>
+        <div class="alphabet-list">
+            A - B - C - D - E - F - G - H - I - J - K - L - M - N - O - P - Q - R - S - T - U - V - W - X - Y - Z
+          </div>
+                
     </div>
+    
 <!--footer vem aqui -->    
 </div>
-
+<div class="container-nav-piloticas">
+    <div style="width: 150px;height: 25px; background-color: white; border-top-left-radius: 5px;border-top-right-radius: 5px; display: flex;align-items: center;justify-content: center;">
+      <span style="font-size: 12px; color: grey;">Mais informações</span>
+      <a class="material-icons chevron-toggle" href="#" style="color: grey;">keyboard_arrow_up</a>
+    </div>
+  </div>
+  
+<div class="details-info">
+    Aqui estão mais informações detalhadas que aparecem ao clicar no ícone.
+  </div>
+</div>
+<footer>
+    <div class="container-politicas">
+        <a href="#">Trabalhe conosco</a>
+  <a href="#">Termos e condições</a>
+  <a href="#">Promoções</a>
+  <a href="#">Como cuidamos da sua privacidade</a>
+  <a href="#">Acessibilidade</a>
+  <a href="#">Contato</a>
+  <a href="#">Informações sobre seguros</a>
+  <a href="#">Programa de Afiliados</a>
+  <a href="#">Black Friday</a>
+    </div>
+    <div class="container-informacoes-loja">
+        <span>Copyright © 1999-2025 Ebazar.com.br LTDA.</span>
+        <span>CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.</span>
+    </div>
+</footer>
 
 
 
 </main>
+
+
+
+
+
+<script>
+   // Seleciona todos os elementos de toggle
+document.querySelectorAll('.chevron-toggle').forEach(chevron => {
+  chevron.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita comportamento padrão do link
+
+    // Seleciona a div de detalhes associada ao botão clicado
+    const details = chevron.closest('.container-nav-piloticas').nextElementSibling;
+
+    if (details.style.display === 'none' || details.style.display === '') {
+      details.style.display = 'block'; // Mostra a div
+      chevron.classList.add('rotate'); // Adiciona a classe para rotação
+    } else {
+      details.style.display = 'none'; // Oculta a div
+      chevron.classList.remove('rotate'); // Remove a classe de rotação
+    }
+  });
+});
+
+
+</script>
+
+
+</body>
+</html>
