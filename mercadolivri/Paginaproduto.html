@@ -161,7 +161,103 @@
 <!--Fim area menu celular-->
 
 <main>
+<!--conteudo mobile-->
+<div class="container-pai-pag-produtos-mobile">
+    <div class="container-quantidades-vendas-avaliacoes-mobile">
+        <div style="display: flex;gap: 10px;">
+            <span class="pequeno-grey">Novo</span>
+            <div class="barra-pequena-entre-frases"></div>
+            <span class="pequeno-grey">+50mil Vendidos</span>
+        </div>
+        <div class="container-quantidade-avaliacoes-estrelas-mobile">
+            <span class="pequeno-grey">4.7</span>
+            <div class="stars-container">
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9" />
+            </svg>
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9" />
+            </svg>
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9" />
+            </svg>
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9" />
+            </svg>
+            <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9" />
+            </svg>
+          </div>
+          <span class="pequeno-grey">(2928)</span>
+          </div>
+    </div>
+    <div class="container-mercado-preto">
+        <img src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/melichoice.svg" alt="mercado-preto">
+        <span>RECOMENDADO</span>
+    </div>
+    <!--TITULO ANUNCIO MOBILE-->
+    <h1 class="titulo-produto-mobile">Pendrive twist preto 64gb multilaser pd590</h1>
+    <div class="container-produto-mobile"> 
+        <div class="container-numero-foto-favorito">
+            <div class="contador-foto"><span>3</span><span>/</span><span>5</span></div>
+            <div class="favorito-mobile"><i class="material-icons">favorite</i></div>
+        </div>
+        <div class="foto-mobile"></div>
+        <div class="container-compartilhar">
+            <div></div>
+            <div><i class="material-icons">share</i></div>
+        </div>
+        <div class="container-radio">
+            <label for="radio-mobile"></label>
+            <input type="radio" name="radio" id="radio-mobile">
+            <input type="radio" name="radio" id="radio-mobile">
+            <input type="radio" name="radio" id="radio-mobile">
+            <input type="radio" name="radio" id="radio-mobile">
+            <input type="radio" name="radio" id="radio-mobile">
+        </div>
+        <div class="container-valor-produto-mobile">
+            <div class="preco-antigo-mobile">
+                <s>
+                    <span class="antigo-cifrao-mobile-pag-produto">R$</span>
+                    <span class="antigo-valor-produto-mobile">44</span>
+                    <span class="antigo-centavos">68</span>
+                </s>
+            </div>
+        </div>
+        <div class="valor-atual-mobile">
+            <span class="cifrao-mobile">R$</span>
+            <span class="valor-atual-pag-mobile">33</span>
+            <span class="centavos-atual-mobile">51</span>
+            <span class="desconto-mobile">23%</span>
+            <span class="desconto-mobile">OFF</span>
+        </div>
+        <span class="pague-parcelado">Pague parcelado</span>
+        <span class="link-azul-pequeno"><a href="#">Ver os meios de pagamento</a></span>
+        <span class="data-entrega-mobile">Chegará entre dia 6 e 11/fev</span>
+        <span class="data-entrega-rapida-mobile">Chegará entre sexta-feira e quarta-feira 5/fev</span>
+        <span class="link-azul-pequeno"><a href="#">Mais formas de entrega</a></span>
+        <div class="container-estoque-disponivel-mobile">
+            <p>Estoque disponível</p>
+            <div class="container-quantidade-box">
+                <div class="container-quantidade">
+                    <span>Quantidade:</span>
+                    <span class="quantidade-disponivel-comprar">1</span>
+                    <span class="quantidade-disponivel">(+500 disponíveis)</span>
+                </div>
+                <i class="material-icons" style="color: rgb(52, 132, 250);">chevron_right</i>
+            </div>
+        </div>
+        <div class="container-buttons-menu">
+            <a href="#">Comprar Agora</a>
+            <a href="#">Adicionar ao carrinho</a>
+        </div>
+        <!------------------------->
+    </div>
+</div>
 
+
+<!--fim conteudo mobile-->
+    <!-- conteudo pc-->
 <div class="pag-produtos">
     <div class="foto-produto-galeria">
         <div class="caixa-foto-produto">
@@ -828,7 +924,7 @@
         
     
     </div>
-    <div style="display: flex; justify-content: space-between; width: 1180px;">
+    <div id="anuncioid">
         <div></div>
         <div style="display: flex; gap:10px; align-items: center; margin-top: 10px;">
             <span style="font-size: 14px;">Anúncio <strong>#2768768796</strong></span>
@@ -867,14 +963,80 @@
 <!--footer vem aqui -->    
 </div>
 <div class="container-nav-piloticas">
-    <div style="width: 150px;height: 25px; background-color: white; border-top-left-radius: 5px;border-top-right-radius: 5px; display: flex;align-items: center;justify-content: center;">
+    <div style="width: 150px;height: 25px; background-color: white; border-top-left-radius: 5px;border-top-right-radius: 5px; display: flex;align-items: center;justify-content: center; border-top: 1px solid #F3F3F3; border-left: 1px solid #F3F3F3 ;border-right: 1px solid #F3F3F3 ; border-bottom: 1px solid white;">
       <span style="font-size: 12px; color: grey;">Mais informações</span>
       <a class="material-icons chevron-toggle" href="#" style="color: grey;">keyboard_arrow_up</a>
     </div>
   </div>
   
-<div class="details-info">
-    Aqui estão mais informações detalhadas que aparecem ao clicar no ícone.
+<div class="details-info" style="display: none;">
+    <div class="footer-section">
+        <div class="footer-column">
+          <h3>Sobre o</h3>
+          <ul>
+            <li>Mercado Livre</li>
+            <li>Investor relations</li>
+            <li>Tendências</li>
+            <li>Sustentabilidade</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Outros sites</h3>
+          <ul>
+            <li>Desenvolvedores</li>
+            <li>Mercado Pago</li>
+            <li>Envios</li>
+            <li>Mercado Shops</li>
+            <li>Mercado Ads</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <ul>
+            <li>Comprar</li>
+            <li>Vender</li>
+            <li>Solução de problemas</li>
+            <li>Segurança</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Redes sociais</h3>
+          <ul>
+            <li>X</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>YouTube</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Minhas contas</h3>
+          <ul>
+            <li>Entre</li>
+            <li>Vender</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Assinaturas</h3>
+          <ul>
+            <li>Meli+</li>
+            <li>Disney+</li>
+            <li>Deezer Premium</li>
+            <li>Max</li>
+            <li>Paramount+</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Temporadas</h3>
+          <ul>
+            <li>Dia do consumidor</li>
+            <li>Dia das mães</li>
+            <li>Black Friday</li>
+            <li>Descontaço</li>
+          </ul>
+        </div>
+      </div>
+      
   </div>
 </div>
 <footer>

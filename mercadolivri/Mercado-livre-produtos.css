@@ -72,6 +72,10 @@ main{
     height: 60px;
 }
 
+.foto-produto-comprar:hover{
+    border: 1.5px solid #3483FA;
+}
+
 .foto-produto-comprar img {
     width: 100%;
     height: auto;
@@ -514,6 +518,7 @@ caption{
     justify-content: center;
     padding: 10;
     flex-direction: column;
+    border-top: 1px solid #F3F3F3;
   }
 
   .container-politicas a{
@@ -541,6 +546,7 @@ caption{
     width: 100%;
     display: flex;
     justify-content: center;
+    
 
   }
   
@@ -549,8 +555,13 @@ caption{
 .details-info{
     display: none;
     width: 100%;
-    height: 100px;
+    height: 200px;
     background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
 }
 
 
@@ -560,6 +571,40 @@ caption{
   .chevron-toggle.rotate {
     transform: rotate(180deg); /* Gira o ícone para baixo */
   }
+
+
+
+  .footer-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
+  }
+  
+  
+  .footer-column h3 {
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 4px;
+  }
+  
+#anuncioid{
+    display: flex; justify-content: space-between; width: 1180px;
+}
+
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -804,3 +849,284 @@ caption{
 
 }
 
+/**area produtos mobile**/
+
+.container-pai-pag-produtos-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:10px;
+    background-color: white;
+}
+
+
+.container-quantidades-vendas-avaliacoes-mobile{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    justify-content: space-between;
+}
+
+.pequeno-grey{
+    color: grey;
+    font-size: 12px;
+}
+
+.barra-pequena-entre-frases{
+    width: 1px;
+    height: 10px;
+    background-color: grey;
+    align-self: center;
+}
+
+
+.stars-container {
+    display: flex;
+    gap: 5px; /* Espaçamento entre as estrelas */
+  }
+  
+  .star {
+    width: 10px;
+    height: 10px;
+    fill:#3483FA; /* Cor da estrela */
+  }
+
+  .container-quantidade-avaliacoes-estrelas-mobile{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .container-mercado-preto{
+    width: 110px;
+    height: 20px;
+    background-color: black;
+    border-radius: 3px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 9px;
+    color: white;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .container-mercado-preto img{
+    width: 20px;
+    height: 15px;
+        
+  }
+
+  .titulo-produto-mobile{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  .container-produto-mobile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .container-numero-foto-favorito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contador-foto{
+    font-size: 14px;
+    background-color: #F5F5F5;
+    width: 40px;
+    height: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  i{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+  }
+
+  .container-compartilhar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .foto-mobile{
+    width: 100%;
+    height: 300px;
+    border: 1px solid;
+    padding: 10px 0px;
+  }
+  .container-radio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #radio-mobile{
+    width: 15px;
+    color: #3483FA;
+    border: none;
+  }
+
+  .container-valor-produto-mobile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .preco-antigo-mobile{
+    color: grey;
+  }
+
+  .valor-atual-mobile{
+    width: 100%;
+    display: flex;
+   
+  }
+  .cifrao-mobile{
+    font-size: 32px;
+    margin-right: 3px;
+  }
+  .valor-atual-pag-mobile{
+    font-size: 32px;
+    margin-right: 2px;
+  }
+  .desconto-mobile{
+    font-size: 18px;
+    color: #7CD1A5;
+    align-self: center;
+    margin-left: 4px;
+  }
+
+  .pague-parcelado{
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .link-azul-pequeno a{
+    text-decoration: none;
+    color: #3483FA;
+    font-size: 14px;
+  }
+
+  .link-azul-pequeno{
+    margin-top: 5px;
+  }
+
+  .data-entrega-mobile{
+    font-size: 16px;
+    margin-top: 50px;
+  }
+
+  .data-entrega-rapida-mobile{
+    font-size: 14px;
+    margin-top: 20px;
+  }
+.container-estoque-disponivel-mobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.container-estoque-disponivel-mobile p{
+    margin-top: 10px;
+}
+
+.container-quantidade-box{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+    
+}
+
+.quantidade-disponivel{
+    color: grey;
+    margin-left: 10px;
+}
+
+.container-buttons-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 10px;
+    
+}
+
+.container-buttons-menu a{
+    text-decoration: none;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container-buttons-menu :nth-child(1){
+    background-color: #3483FA;
+    border-radius: 8px;
+    color: white;
+    
+}
+
+.container-buttons-menu :nth-child(2){
+    background-color: #E3EDFB;
+    border-radius: 8px;
+    color:#3483FA;
+}
+
+
+/**fim area produtos moblie**/
+
+
+
+@media(max-width:400px){
+.pag-produtos{
+    display: none;
+}
+.container-quem-comprou-tambem-viu{
+    display: none;
+}
+.container-anuncio-oralb{
+    display: none;
+}
+
+#anuncioid{
+    display: none;
+}
+main{
+    justify-content: flex-start;
+}
+
+
+}
+
+@media(min-width:400px) and (max-width:1980px){
+
+.container-pai-pag-produtos-mobile{
+    display: none;
+}
+
+
+
+}
