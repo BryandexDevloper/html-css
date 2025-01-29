@@ -949,11 +949,20 @@ caption{
     gap: 3px;
   }
 
-  i{
+  .container-numero-foto-favorito i{
     padding: 10px;
     border-radius: 50%;
     background-color: #F5F5F5;
   }
+
+  .container-compartilhar i{
+    
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    
+  }
+
 
   .container-compartilhar{
     width: 100%;
@@ -1089,12 +1098,49 @@ caption{
     
 }
 
+.container-buttons-menu :nth-child(1):hover{
+    background-color:   #1c58b3;
+}
+
+
+.container-buttons-menu :nth-child(2):hover{
+    background-color:   #c8d1db;
+}
+
 .container-buttons-menu :nth-child(2){
     background-color: #E3EDFB;
     border-radius: 8px;
     color:#3483FA;
 }
 
+.vendido-por-mobile{
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.vendido-por-mobile :nth-child(2){
+    color: #3483FA;
+}
+
+.total-vendas{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.container-garantias-mobile{
+    display: flex;
+    flex-direction: column;
+}
+.container-garantias-mobile :nth-child(1){
+   align-self: center;
+  
+}
+
+.container-garantias-mobile :nth-child(2){
+    display: flex;
+}
 
 /**fim area produtos moblie**/
 
