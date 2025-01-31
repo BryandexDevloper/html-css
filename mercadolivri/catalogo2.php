@@ -15,7 +15,8 @@ if ($conn->connect_error) {
 }
 
 // Consulta os dados da tabela
-$sql = "SELECT * FROM catalogo_produtos";
+$id_produto = isset($_GET['id']) ? $_GET['id'] : 1; // Pega o ID do produto da URL (ou usa 1 como padrão)
+$sql = "SELECT * FROM catalogo_produtos WHERE id = $id_produto";
 $resultado = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -354,52 +355,57 @@ $resultado = $conn->query($sql);
     
  
 
-<section id="sec3">
+    <section id="sec3">
     <div class="container-produtos">
         <h2 class="titulo-mais">Inspirado no último visto</h2>
         <div class="produtos">
 
         <?php
-    if ($resultado->num_rows > 0) {
-        while ($linha = $resultado->fetch_assoc()) {
-            // Validação dos dados do banco
-            $preco_antigo = isset($linha["preco_antigo"]) ? $linha["preco_antigo"] : 0;
-            $preco_atual = isset($linha["preco_atual"]) ? $linha["preco_atual"] : 0;
-            $desconto = isset($linha["desconto"]) ? $linha["desconto"] : 0;
-            $parcelado_em = isset($linha["parcelado_em"]) ? $linha["parcelado_em"] : 0;
-            $valor_parcela = isset($linha["valor_parcela"]) ? $linha["valor_parcela"] : 0;
-            $frete_gratis = isset($linha["frete_gratis"]) ? $linha["frete_gratis"] : false;
-            
+        if ($resultado->num_rows > 0) {
+            while ($linha = $resultado->fetch_assoc()) {
+                // Validação dos dados do banco
+                $preco_antigo = isset($linha["preco_antigo"]) ? $linha["preco_antigo"] : 0;
+                $preco_atual = isset($linha["preco_atual"]) ? $linha["preco_atual"] : 0;
+                $desconto = isset($linha["desconto"]) ? $linha["desconto"] : 0;
+                $parcelado_em = isset($linha["parcelado_em"]) ? $linha["parcelado_em"] : 0;
+                $valor_parcela = isset($linha["valor_parcela"]) ? $linha["valor_parcela"] : 0;
+                $frete_gratis = isset($linha["frete_gratis"]) ? $linha["frete_gratis"] : false;
 
-            // HTML para exibir os produtos
-            echo "<div class='area-produtos'>";
-            echo "    <div class='foto-produto'>";
-            echo "        <img src='" . htmlspecialchars($linha["imagem_url"]) . "' alt='Produto'>";
-            echo "    </div>";
-            echo "    <div class='titulo-preco'>";
-            echo "        <a href='#' class='titulo-produto' style='color: black;'>" . htmlspecialchars($linha["nome"]) . "</a>"; // Nome do produto em preto
-            echo "        <div class='promo' style='color:#808080;'><s>R$" . $preco_antigo . "</s></div>"; // Sem formatação de moeda
-            echo "        <div class='valor-desconto'>"; 
-            echo "            <span class='cifrao'>R$</span><span class='valor'>" . $preco_atual . "</span>"; // Sem formatação de moeda
-            echo "            <span class='desconto'>" . htmlspecialchars($desconto) . "% OFF</span>";
-            echo "        </div>";
-            echo "        <div class='parcelado'>";
-            echo "            <span>em " . htmlspecialchars($parcelado_em) . "x R$" . $valor_parcela . "</span>"; // Sem formatação de moeda
-            echo "        </div>";
-            echo "        <div class='frete-gratis'>"; 
-            echo $frete_gratis ? "<span class='frete-verde'>Frete grátis por ser sua primeira compra</span>" : "<span class='frete-verde'>Frete não incluso</span>";
-            echo "        </div>";
-            echo "    </div>";
-            echo "</div>";
+                // ID do produto para gerar o link
+                $id_produto = $linha['id']; // Assume-se que o id do produto seja o campo 'id'
+
+                // HTML para exibir os produtos
+                echo "<div class='area-produtos'>";
+                echo "    <div class='foto-produto'>";
+                echo "        <img src='" . htmlspecialchars($linha["imagem_url"]) . "' alt='Produto'>";
+                echo "    </div>";
+                echo "    <div class='titulo-preco'>";
+                
+                // Link para a página de detalhes
+                echo "        <a href='produto.php?id=" . $id_produto . "' class='titulo-produto' style='color: black;'>" . htmlspecialchars($linha["nome"]) . "</a>"; // Nome do produto em preto
+                echo "        <div class='promo' style='color:#808080;'><s>R$" . $preco_antigo . "</s></div>"; // Sem formatação de moeda
+                echo "        <div class='valor-desconto'>"; 
+                echo "            <span class='cifrao'>R$</span><span class='valor'>" . $preco_atual . "</span>"; // Sem formatação de moeda
+                echo "            <span class='desconto'>" . htmlspecialchars($desconto) . "% OFF</span>";
+                echo "        </div>";
+                echo "        <div class='parcelado'>";
+                echo "            <span>em " . htmlspecialchars($parcelado_em) . "x R$" . $valor_parcela . "</span>"; // Sem formatação de moeda
+                echo "        </div>";
+                echo "        <div class='frete-gratis'>"; 
+                echo $frete_gratis ? "<span class='frete-verde'>Frete grátis por ser sua primeira compra</span>" : "<span class='frete-verde'>Frete não incluso</span>";
+                echo "        </div>";
+                echo "    </div>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>Nenhum produto encontrado.</p>";
         }
-    } else {
-        echo "<p>Nenhum produto encontrado.</p>";
-    }
-?>
+        ?>
 
         </div>  <!-- Fim da div de produtos -->
     </div>  <!-- Fim da div de container-produtos -->
-</section>  <!-- Fim da seção -->
+</section>
+
     
     <section id="sec4">
         <div class="banners">
