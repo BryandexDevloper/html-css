@@ -79,14 +79,19 @@ main{
 .foto-produto-comprar img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
 .foto-grande-img{
     width: 680px;
     height: 504px;
-   
+}
+
+.foto-grande-img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /**Container de informaçoes abaixo da foto**/
@@ -976,6 +981,12 @@ caption{
     border: 1px solid;
     padding: 10px 0px;
   }
+
+  .foto-mobile img{
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
   .container-radio{
     width: 100%;
     display: flex;
@@ -1377,6 +1388,12 @@ main{
     flex-shrink: 0;
 }
 
+.foto-produto-comprar img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .container-metodo-pagamento{
     border: none;
 }
@@ -1477,6 +1494,10 @@ footer{
     display: none;
 }
 
+.id-anuncio-mobile{
+    display: none;
+    
+}
 
 
 }

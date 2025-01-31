@@ -275,7 +275,9 @@ $conn->close();
             <div class="contador-foto"><span>3</span><span>/</span><span>5</span></div>
             <div class="favorito-mobile"><i class="material-icons">favorite</i></div>
         </div>
-        <div class="foto-mobile"></div>
+        <div class="foto-mobile">
+        <img src="<?php echo $foto_1; ?>" alt="Foto do Produto">
+        </div>
         <div class="container-compartilhar">
             <div></div>
             <div><i class="material-icons">share</i></div>
@@ -544,7 +546,7 @@ if ($retire_dia == 1) {
                         </div>
                         <div class="container-quantidade-vendas"><!--CONTAINER DAS VENDAS FEITAS ATENDIMENTO ETC...-->
                             <div class="venda1">
-                                <p style="font-size: 14px;">+1000</p>
+                                <p style="font-size: 14px;"><?php echo $quantidade_vendas_concluidas; ?></p>
                                 <p style="font-size: 12px;  color: gray;">Vendas concluidas</p>
                             </div>
                             <div class="venda1">
@@ -568,17 +570,32 @@ if ($retire_dia == 1) {
                 <hr style="margin-bottom: 50px;margin-top: 50px;">
                 <h2 style="font-weight: 500;font-size: 20px;">Fotos do produto</h2>
                 <div class="caixa-foto-produto">
-                    <div class="foto-produto-comprar">oi</div>
-                    <div class="foto-produto-comprar"></div>
-                    <div class="foto-produto-comprar"></div>
-                    <div class="foto-produto-comprar"></div>
-                    <div class="foto-produto-comprar"></div>
-                    <div class="foto-produto-comprar"></div>
-                </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_1; ?>" alt="Foto 1" />
+                    </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_2; ?>" alt="Foto 2" />
+                    </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_3; ?>" alt="Foto 3" />
+                    </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_4; ?>" alt="Foto 4" />
+                    </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_5; ?>" alt="Foto 5" />
+                    </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_6; ?>" alt="Foto 6" />
+                    </div>
+                    <div class="foto-produto-comprar">
+                        <img src="<?php echo $foto_7; ?>" alt="Foto 7" />
+                    </div>
+                </div>  
             </div>
             <div class="container-descircao-produto">
                 <h2 style="font-weight: 500; margin-top: 40px; font-size: 20px;">Descrição</h2>
-                <p class="descricao" style="margin-top: 60px; color: gray;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quis, assumenda perspiciatis ratione ipsam labore, nemo ea tempore modi fugit voluptatibus libero illum totam soluta natus! Necessitatibus vero sapiente optio?</p>
+                <p class="descricao" style="margin-top: 60px; color: gray;"><?php echo $descricao; ?></p>
             </div>
             <hr style="margin-bottom: 50px;">
             <div class="meios-pagamento">
@@ -643,13 +660,13 @@ if ($retire_dia == 1) {
                     <h3 style="font-weight: 500; font-size: 18px; margin-top: 50px;">últimas perguntas feitas</h3>
                     <!--classe perguntas e respostas-->
                     <div class="pergunta">
-                        <span class="pergunta">Esta e uma pergunta sendo feita</span>
-                        <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" >Esta e uma resposta</span></div>  
+                        <span class="pergunta"><?php echo $pergunta_comprador1; ?></span>
+                        <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_vendedor1; ?></span></div>  
                     </div><!--perguntas terminam aqui-->
                     
                     <div class="pergunta">
-                        <span class="pergunta">Esta e uma pergunta sendo feita</span>
-                        <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" >Esta e uma resposta</span></div>  
+                        <span class="pergunta"><?php echo $pergunta_comprador2; ?></span>
+                        <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_vendedor2; ?></span></div>  
                     </div><!--perguntas terminam aqui-->
 
                     <a href="#" style="font-size: 14px; color: dodgerblue; text-decoration: none;">Ver todas as perguntas</a>
@@ -760,7 +777,7 @@ if ($retire_dia == 1) {
                         <h3 style="font-weight: 500; font-size: 16px; margin-top: 10px;">avaliações de características</h3>
                         <div class="container-melhores-avaliacoes"> <!--Container melhores avaliaçoes-->
                             <div class="melhores-avaliacoes">
-                                <p>Custo-benefíco</p>
+                                <p><?php echo $avaliacao_1; ?></p>
                                 <div><svg width="230" height="20" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Primeira estrela -->
                                     <polygon points="10,2 12,8 18,8 13,11 15,17 10,13 5,17 7,11 2,8 8,8" fill="dodgerblue" />
@@ -777,7 +794,7 @@ if ($retire_dia == 1) {
                             </div>
 
                             <div class="melhores-avaliacoes">
-                                <p>Qualidade dos materiais</p>
+                                <p><?php echo $avaliacao_2; ?></p>
                                 <div><svg width="230" height="20" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Primeira estrela -->
                                     <polygon points="10,2 12,8 18,8 13,11 15,17 10,13 5,17 7,11 2,8 8,8" fill="dodgerblue" />
@@ -793,7 +810,7 @@ if ($retire_dia == 1) {
                             </div>
 
                             <div class="melhores-avaliacoes">
-                                <p>Fácil de instalar</p>
+                                <p><?php echo $avaliacao_3; ?></p>
                                 <div><svg width="230" height="20" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Primeira estrela -->
                                     <polygon points="10,2 12,8 18,8 13,11 15,17 10,13 5,17 7,11 2,8 8,8" fill="dodgerblue" />
@@ -827,16 +844,16 @@ if ($retire_dia == 1) {
 <div class="pag-produtos">
     <div class="foto-produto-galeria">
         <div class="caixa-foto-produto">
-            <div class="foto-produto-comprar">oi</div>
-            <div class="foto-produto-comprar"></div>
-            <div class="foto-produto-comprar"></div>
-            <div class="foto-produto-comprar"></div>
-            <div class="foto-produto-comprar"></div>
-            <div class="foto-produto-comprar"></div>
+            <div class="foto-produto-comprar"><img src="<?php echo $foto_1; ?>" alt="Foto-do-produto"></div>
+            <div class="foto-produto-comprar"><img src="<?php echo $foto_2; ?>" alt="Foto-do-produto"></div>
+            <div class="foto-produto-comprar"><img src="<?php echo $foto_3; ?>" alt="Foto-do-produto"></div>
+            <div class="foto-produto-comprar"><img src="<?php echo $foto_4; ?>" alt="Foto-do-produto"></div>
+            <div class="foto-produto-comprar"><img src="<?php echo $foto_5; ?>" alt="Foto-do-produto"></div>
+            <div class="foto-produto-comprar"><img src="<?php echo $foto_6; ?>" alt="Foto-do-produto"></div>
         </div>
 
         <div class="container-foto-grande">
-            <div class="foto-grande-img"></div>
+            <div class="foto-grande-img"><img src="<?php echo $foto_1; ?>" alt="Foto-do-produto"></div>
             <hr>
             <!--area container dos prdutos relacionados com fotos-->
             <div class="container-produtos-relacionados-comentarios"><!--container produtos relacionados-->
@@ -974,29 +991,29 @@ if ($retire_dia == 1) {
                         <table>
                            <tr>
                             <th>Marca</th>
-                            <td class="marca">Intel</td>
+                            <td class="marca"><?php echo $marca; ?></td>
                            </tr>
                            <tr>
                             <th>Linha</th>
-                            <td class="linha">intel cooler</td>
+                            <td class="linha"><?php echo $linha; ?></td>
                            </tr>
                            <tr>
                             <th>Modelo</th>
-                            <td class="modelo">INTEL COOLER</td>
+                            <td class="modelo"><?php echo $modelo; ?></td>
                            </tr>
                            <tr>
                             <th>Formato de venda</th>
-                            <td class="formato-de-venda">Unidade</td>
+                            <td class="formato-de-venda"><?php echo $formato_venda; ?></td>
                            </tr>
                            <tr>
                             <th>Tipo do produto</th>
-                            <td class="tipo-do-produto">Pneu</td>
+                            <td class="tipo-do-produto"><?php echo $tipo_produto; ?></td>
                            </tr>
                         </table>
                         <hr style="margin-top: 30px;">
                         <div class="container-descircao-produto">
                             <h2 style="font-weight: 500; margin-top: 40px;">Descrição</h2>
-                            <p class="descricao" style="margin-top: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quis, assumenda perspiciatis ratione ipsam labore, nemo ea tempore modi fugit voluptatibus libero illum totam soluta natus! Necessitatibus vero sapiente optio?</p>
+                            <p class="descricao" style="margin-top: 60px;"><?php echo $descricao; ?></p>
                         </div>
                         <hr>
                             <div class="container-quem-viu-comprou">
@@ -1136,13 +1153,13 @@ if ($retire_dia == 1) {
                                             <h3 style="font-weight: 500; font-size: 18px; margin-top: 50px;">últimas perguntas feitas</h3>
                                             <!--classe perguntas e respostas-->
                                             <div class="pergunta">
-                                                <span class="pergunta">Esta e uma pergunta sendo feita</span>
-                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" >Esta e uma resposta</span></div>  
+                                                <span class="pergunta"><?php echo $pergunta_1; ?></span>
+                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_1; ?></span></div>  
                                             </div><!--perguntas terminam aqui-->
                                             
                                             <div class="pergunta">
-                                                <span class="pergunta">Esta e uma pergunta sendo feita</span>
-                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" >Esta e uma resposta</span></div>  
+                                                <span class="pergunta"><?php echo $pergunta_2; ?></span>
+                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_2; ?></span></div>  
                                             </div><!--perguntas terminam aqui-->
 
                                             <a href="#" style="font-size: 14px; color: dodgerblue; text-decoration: none;">Ver todas as perguntas</a>
@@ -1250,7 +1267,7 @@ if ($retire_dia == 1) {
                                                 <h3 style="font-weight: 500; font-size: 16px; margin-top: 10px;">avaliações de características</h3>
                                                 <div class="container-melhores-avaliacoes"> <!--Container melhores avaliaçoes-->
                                                     <div class="melhores-avaliacoes">
-                                                        <p>Custo-benefíco</p>
+                                                        <p><?php echo $avaliacao_1; ?></p>
                                                         <div><svg width="230" height="20" xmlns="http://www.w3.org/2000/svg">
                                                             <!-- Primeira estrela -->
                                                             <polygon points="10,2 12,8 18,8 13,11 15,17 10,13 5,17 7,11 2,8 8,8" fill="dodgerblue" />
@@ -1267,7 +1284,7 @@ if ($retire_dia == 1) {
                                                     </div>
 
                                                     <div class="melhores-avaliacoes">
-                                                        <p>Qualidade dos materiais</p>
+                                                        <p><?php echo $avaliacao_2; ?></p>
                                                         <div><svg width="230" height="20" xmlns="http://www.w3.org/2000/svg">
                                                             <!-- Primeira estrela -->
                                                             <polygon points="10,2 12,8 18,8 13,11 15,17 10,13 5,17 7,11 2,8 8,8" fill="dodgerblue" />
@@ -1283,7 +1300,7 @@ if ($retire_dia == 1) {
                                                     </div>
 
                                                     <div class="melhores-avaliacoes">
-                                                        <p>Fácil de instalar</p>
+                                                        <p><?php echo $avaliacao_3; ?></p>
                                                         <div><svg width="230" height="20" xmlns="http://www.w3.org/2000/svg">
                                                             <!-- Primeira estrela -->
                                                             <polygon points="10,2 12,8 18,8 13,11 15,17 10,13 5,17 7,11 2,8 8,8" fill="dodgerblue" />
@@ -1318,8 +1335,7 @@ if ($retire_dia == 1) {
                 <div class="quantidade-vendidas"><span>Novo</span><div style="width: 1px; height: 15px; background-color: grey;"></div><span>+100 vendidos</span></div>
                 <div class="coracao"><i class="material-icons">favorite</i></div>
             </div>
-            <h1 class="titulo-produto">Cooler Intel Original Lga 1156/1155/1150/1151 I3 I5 I7
-            </h1>
+            <h1 class="titulo-produto"><?php echo $titulo_produto; ?></h1>
             <div class="container-avaliacoes">
                 <span class="quantidade-avaliacoes">4.7</span>
                 <span><svg width="90" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -1347,14 +1363,26 @@ if ($retire_dia == 1) {
                   <span class="quantidade-comentarios">(11)</span>
                   
             </div>
-                <div class="valor-parcela"><span class="cifrao">R$</span><span class="valor">38</span> <br>
-                <p>em <span class="parcelado">3x R$ 12</span><span class="centavos">67</span> sem juros</p>
+                <div class="valor-parcela"><span class="cifrao">R$</span><span class="valor"><?php echo $preco_atual; ?></span> <br>
+                <p>em <span class="parcelado"><?php echo $parcelado_em; ?>x</span>R$ <?php echo $valor_parcela; ?><span class="centavos">67</span> sem juros</p>
                 <a href="#">Ver meios de pagamento</a>
                 </div>
                 <div class=" container-prazo-entrega">
-                    <span class="chegara-dia" style="color:rgb(0, 166, 80);">Chegará grátis amanhã</span>
-                    <span>por ser sua primeira compra</span>
-                    <span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas 17 h 7 min</span>
+                                <?php 
+                // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
+                if ($chegara_dia == 1) {
+                    echo '<span class="chegara-dia" style="color:rgb(0, 166, 80);">Chegará grátis amanhã</span>';
+                    echo '<span>por ser sua primeira compra</span>';
+                    echo '<span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas 17 h 7 min</span>';
+                }
+
+                // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
+                if ($retire_dia == 1) {
+                    echo '<span class="chegara-dia" style="color:rgb(0, 166, 80);">Retire grátis amanhã</span>';
+                    echo '<span>em um ponto de retirada</span>';
+                    echo '<span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas 17 h 7 min</span>';
+                }
+                ?>
                     <a href="#" style="margin-top: 5px; font-size: 14px;">mais formas de entrega</a>
                 </div>
                 <div class="container-retire-tal-dia">
