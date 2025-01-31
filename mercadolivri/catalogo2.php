@@ -386,7 +386,7 @@ $resultado_ultimos_produtos = $conn->query($sql_ultimos_produtos);
                 echo "        <img src='" . htmlspecialchars($linha["imagem_url"]) . "' alt='Produto'>";
                 echo "    </div>";
                 echo "    <div class='titulo-preco'>";
-                echo "        <a href='Paginaproduto2.php?id=" . $linha['id'] . "' class='titulo-produto' style='color: black;'>" . htmlspecialchars($linha["nome"]) . "</a>";
+                echo "        <a href='Paginaproduto.php?id=" . $linha['id'] . "' class='titulo-produto' style='color: black;'>" . htmlspecialchars($linha["nome"]) . "</a>";
                 echo "        <div class='promo' style='color:#808080;'><s>R$" . $preco_antigo . "</s></div>"; // Sem formatação de moeda
                 echo "        <div class='valor-desconto'>"; 
                 echo "            <span class='cifrao'>R$</span><span class='valor'>" . $preco_atual . "</span>"; // Sem formatação de moeda
