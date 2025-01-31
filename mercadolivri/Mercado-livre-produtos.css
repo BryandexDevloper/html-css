@@ -755,6 +755,12 @@ caption{
 
 }
 
+.foto-nome img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .nome-vendedor{
     width:auto;
     height: 50px;

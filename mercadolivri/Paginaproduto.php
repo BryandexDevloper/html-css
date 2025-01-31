@@ -1367,30 +1367,27 @@ if ($retire_dia == 1) {
                 <p>em <span class="parcelado"><?php echo $parcelado_em; ?>x</span>R$ <?php echo $valor_parcela; ?><span class="centavos">67</span> sem juros</p>
                 <a href="#">Ver meios de pagamento</a>
                 </div>
-                <div class=" container-prazo-entrega">
                                 <?php 
-                // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
+                // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem de entrega
                 if ($chegara_dia == 1) {
+                    echo '<div class="container-prazo-entrega">';
                     echo '<span class="chegara-dia" style="color:rgb(0, 166, 80);">Chegará grátis amanhã</span>';
                     echo '<span>por ser sua primeira compra</span>';
-                    echo '<span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas 17 h 7 min</span>';
+                    echo '<span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas ' . $tempo_frete . '</span>';  // Aqui você pode substituir $tempo_frete por uma variável de tempo do banco ou calcular o tempo restante
+                    echo '<a href="#" style="margin-top: 5px; font-size: 14px;">mais formas de entrega</a>';
+                    echo '</div>';
                 }
 
-                // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
+                // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem de retirada
                 if ($retire_dia == 1) {
-                    echo '<span class="chegara-dia" style="color:rgb(0, 166, 80);">Retire grátis amanhã</span>';
-                    echo '<span>em um ponto de retirada</span>';
-                    echo '<span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas 17 h 7 min</span>';
+                    echo '<div class="container-retire-tal-dia">';
+                    echo '<span class="retire-tal-dia" style="color: rgb(0,166,80);">Retire grátis a partir de amanhã</span><span> em uma agência Mercado Livre</span>';
+                    echo '<span style="font-size: 14px; color: gray;"><br>Comprando dentro das próximas</span>';
+                    echo '<span style="font-size: 14px;">' . $tempo_retirada . '</span>';  // Aqui também, substitua $tempo_retirada pela variável que você deseja mostrar
+                    echo '</div>';
                 }
                 ?>
-                    <a href="#" style="margin-top: 5px; font-size: 14px;">mais formas de entrega</a>
-                </div>
-                <div class="container-retire-tal-dia">
-                    <span class="retire-tal-dia" style="color: rgb(0,166,80);">Retire grátis a partir de amanhã</span><span> em uma agência Mercado Livre</span>
-                    <span style="font-size: 14px; color: gray;"><br>Comprando dentro das próximas</span>
-                    <span style="font-size: 14px;">16 h 57h</span>
 
-                </div>
 
                 <div class="container-estoque-disponivel">
                     <span class="estoque-disponivel">Estoque disponível</span><span style="color: grey; font-size: 14px;"><br>Armazenado e enviado pelo</span><span style="font-size: 14PX; color: rgb(0, 166, 80);"> Envio FULL</span>
@@ -1410,8 +1407,8 @@ if ($retire_dia == 1) {
                 <div class="container-informacoes-da-loja">
 
                     <div class="informacoes-da-loja"><!--aqui vai o nome da loja novamente-->
-                        <div><span style="font-size: 14px;">Vendido por</span><span class="none-da-loja" style="color:  rgb(52, 132, 250); font-size: 14px;"> Nome da loja</span></div>
-                        <div style="display: flex; gap: 10px; align-items: center;"><span style="font-size: 14px;">MercadoLíder</span><div style="width: 1px; height: 15px; background-color: grey;"></div><span style="font-size: 14px;">+1000 vendas</span></div>
+                        <div><span style="font-size: 14px;">Vendido por</span><span class="none-da-loja" style="color:  rgb(52, 132, 250); font-size: 14px;"><?php echo $nome_loja; ?></span></div>
+                        <div style="display: flex; gap: 10px; align-items: center;"><span style="font-size: 14px;">MercadoLíder</span><div style="width: 1px; height: 15px; background-color: grey;"></div><span style="font-size: 14px;"><?php echo '+' . $quantidade_vendas_concluidas . ' vendas'; ?></span></div>
                         
                     </div>
                     <!--fim informaçoes da loja-->
@@ -1437,9 +1434,9 @@ if ($retire_dia == 1) {
             <div class="container-vendedor">
                 <div class="container-foto-nome-vendeor">
                     <div class="container-foto-nome">
-                        <div class="foto-nome">1</div><!--aqui vai a foto da loja-->
-                        <div class="nome-vendedor"><span class="nome-do-vendedor"><strong>NEXT PC</strong> <!--aqui o nome-->
-                            <div><span style="font-size: 14px;">+100</span> <span style="color: grey; font-size: 14px;">Produtos</span></div>
+                        <div class="foto-nome"><img src="<?php echo $foto_loja; ?>" alt="Foto-loja"></div><!--aqui vai a foto da loja-->
+                        <div class="nome-vendedor"><span class="nome-do-vendedor"><strong><?php echo $nome_loja; ?></strong> <!--aqui o nome-->
+                            <div><span style="font-size: 14px;">+<?php echo $quantidade_produtos_loja; ?></span> <span style="color: grey; font-size: 14px;">Produtos</span></div>
                         </span></div>
                     </div>
                     <div class="botao-seguir">
@@ -1460,7 +1457,7 @@ if ($retire_dia == 1) {
                     </div>
                     <div class="container-quantidade-vendas"><!--CONTAINER DAS VENDAS FEITAS ATENDIMENTO ETC...-->
                         <div class="venda1">
-                            <p style="font-size: 14px;">+1000</p>
+                            <p style="font-size: 14px;"><?php echo '+' . $quantidade_vendas_concluidas . ' vendas'; ?></p>
                             <p style="font-size: 12px;  color: gray;">Vendas concluidas</p>
                         </div>
                         <div class="venda1">
