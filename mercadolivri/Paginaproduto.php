@@ -1,3 +1,71 @@
+<?php
+// Configurações do banco de dados
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "produtos";
+
+// Conexão com o banco de dados
+$conn = new mysqli($servidor, $usuario, $senha, $banco);
+
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
+
+// Consulta todos os dados do produto (usando o ID)
+$id_produto = isset($_GET['id']) ? $_GET['id'] : 1; // Pega o ID do produto da URL (ou usa 1 como padrão)
+$sql = "SELECT * FROM catalogo_produtos WHERE id = $id_produto";
+$resultado = $conn->query($sql);
+
+// Verifica se há resultado
+if ($resultado->num_rows > 0) {
+    $linha = $resultado->fetch_assoc();
+    $titulo_produto = $linha['nome'];
+    $imagem_url = $linha['imagem_url'];
+    $preco_antigo = $linha['preco_antigo'];
+    $preco_atual = $linha['preco_atual'];
+    $desconto = $linha['desconto'];
+    $parcelado_em = $linha['parcelado_em'];
+    $valor_parcela = $linha['valor_parcela'];
+    $frete_gratis = $linha['frete_gratis'];
+    $foto_1 = $linha['foto_1'];
+    $foto_2 = $linha['foto_2'];
+    $foto_3 = $linha['foto_3'];
+    $foto_4 = $linha['foto_4'];
+    $foto_5 = $linha['foto_5'];
+    $foto_6 = $linha['foto_6'];
+    $foto_7 = $linha['foto_7'];
+    $chegara_dia = $linha['chegara_dia'];
+    $retire_dia = $linha['retire_dia'];
+    $foto_loja = $linha['foto_loja'];
+    $nome_loja = $linha['nome_loja'];
+    $quantidade_produtos_loja = $linha['quantidade_produtos_loja'];
+    $quantidade_vendas_concluidas = $linha['quantidade_vendas_concluidas'];
+    $nome_marca = $linha['nome_marca'];
+    $linha_produto = $linha['linha'];
+    $modelo = $linha['modelo'];
+    $garantia = $linha['garantia'];
+    $formato_venda = $linha['formato_venda'];
+    $tipo_produto = $linha['tipo_produto'];
+    $descricao = $linha['descricao'];
+    $pergunta_comprador1 = $linha['pergunta_comprador1'];
+    $resposta_vendedor1 = $linha['resposta_vendedor1'];
+    $pergunta_comprador2 = $linha['pergunta_comprador2'];
+    $resposta_vendedor2 = $linha['resposta_vendedor2'];
+    $pergunta_comprador3 = $linha['pergunta_comprador3'];
+    $resposta_vendedor3 = $linha['resposta_vendedor3'];
+    $avaliacao_1 = $linha['avaliacao_1'];
+    $avaliacao_2 = $linha['avaliacao_2'];
+    $avaliacao_3 = $linha['avaliacao_3'];
+} else {
+    die("Produto não encontrado");
+}
+
+// Fecha a conexão
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -195,8 +263,13 @@
         <img src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/melichoice.svg" alt="mercado-preto">
         <span>RECOMENDADO</span>
     </div>
+
+
+    <!--php celular vem  aqui-->
+
+
     <!--TITULO ANUNCIO MOBILE-->
-    <h1 class="titulo-produto-mobile">Pendrive twist preto 64gb multilaser pd590</h1>
+    <h1 class="titulo-produto-mobile"><?php echo $titulo_produto; ?></h1>
     <div class="container-produto-mobile"> 
         <div class="container-numero-foto-favorito">
             <div class="contador-foto"><span>3</span><span>/</span><span>5</span></div>
@@ -218,23 +291,53 @@
         <div class="container-valor-produto-mobile">
             <div class="preco-antigo-mobile">
                 <s>
-                    <span class="antigo-cifrao-mobile-pag-produto">R$</span>
-                    <span class="antigo-valor-produto-mobile">44</span>
-                    <span class="antigo-centavos">68</span>
+                                <span class="antigo-cifrao-mobile-pag-produto">R$</span>
+                <span class="antigo-valor-produto-mobile">
+                    <?php echo number_format($preco_antigo, 0, ',', '.'); ?>
+                </span>
+                <span class="antigo-centavos">
+                    <?php 
+                    // Calculando os centavos
+                    $centavos = $preco_antigo - floor($preco_antigo);
+                    echo number_format($centavos * 100, 0, ',', '.');
+                    ?>
+                </span>
                 </s>
             </div>
         </div>
         <div class="valor-atual-mobile">
-            <span class="cifrao-mobile">R$</span>
-            <span class="valor-atual-pag-mobile">33</span>
-            <span class="centavos-atual-mobile">51</span>
-            <span class="desconto-mobile">23%</span>
-            <span class="desconto-mobile">OFF</span>
+        <span class="cifrao-mobile">R$</span>
+                <span class="valor-atual-pag-mobile">
+                    <?php echo number_format($preco_atual, 0, ',', '.'); ?>
+                </span>
+                <span class="centavos-atual-mobile">
+                    <?php 
+                    // Calculando os centavos para o preço atual
+                    $centavos_atual = $preco_atual - floor($preco_atual);
+                    echo number_format($centavos_atual * 100, 0, ',', '.');
+                    ?>
+                </span>
+                <span class="desconto-mobile">
+                    <?php 
+                    // Exibindo o desconto em porcentagem
+                    echo $desconto . '%';
+                    ?>
+                </span>
+                <span class="desconto-mobile">OFF</span>
         </div>
         <span class="pague-parcelado">Pague parcelado</span>
         <span class="link-azul-pequeno"><a href="#">Ver os meios de pagamento</a></span>
-        <span class="data-entrega-mobile">Chegará entre dia 6 e 11/fev</span>
-        <span class="data-entrega-rapida-mobile">Chegará entre sexta-feira e quarta-feira 5/fev</span>
+        <?php 
+// Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
+if ($chegara_dia == 1) {
+    echo '<span class="data-entrega-mobile">Chegará entre dia 6 e 11/fev</span>';
+}
+
+// Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
+if ($retire_dia == 1) {
+    echo '<span class="data-entrega-rapida-mobile">Chegará entre sexta-feira e quarta-feira 5/fev</span>';
+}
+?>
         <span class="link-azul-pequeno"><a href="#">Mais formas de entrega</a></span>
         <div class="container-estoque-disponivel-mobile">
             <p>Estoque disponível</p>
@@ -252,7 +355,7 @@
             <a href="#">Adicionar ao carrinho</a>
         </div>
         <div class="vendido-por-mobile">
-            <span>Vendido por</span><span class="nome-da-loja">BARTOLOMEUIMPOTS</span>
+        <span>Vendido por</span><span class="nome-da-loja"><?php echo $nome_loja; ?></span>
             <!--------------------------------------------------------->
         </div>
         <span class="total-vendas">+10mil vendas</span>
@@ -273,17 +376,17 @@
 
                 <div class="container-favoritar-celular">
                     <div><i class="material-icons">favorite</i><span class="link-azul-pequeno"><a href="#">Adicionar aos favoritos</a></span></div>
-                    <div><i class="material-icons">share</i><span class="link-azul-pequeno"><a href="#">Compartilhar</a></span></div>
+                    <div><i class="material-icons">share</i><span class="link-azul-pequeno"><a href="#">Compartilhar</a></span></div>                                                   
                 </div>
             <hr>
             <div class="container-descricao-produto-mobile">
                 <h2>Características do produto</h2>
                 <div class="container-caracteristica-produto">
-                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Marca:</span><span class="marca-mobile">Aqui vai a marca</span></div>
-                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Modelo:</span><span class="modelo-mobile">Aqui vai o modelo</span></div>
-                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Linha:</span><span class="linha">Aaqui vai a linha</span></div>
-                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Terreno:</span><span class="terreno">Aqui vai o terreno</span></div>
-                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Garantia:</span><span class="garantia">Aqui vai garantias</span></div>
+                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Marca:</span><span class="marca-mobile"><?php echo $nome_marca; ?></span></div>
+                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Modelo:</span><span class="modelo-mobile"><?php echo $modelo; ?></span></div>
+                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Linha:</span><span class="linha"><?php echo $linha_produto; ?></span></div>
+                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Tipo de produto:</span><span class="terreno"><?php echo $tipo_produto; ?></span></div>
+                    <div class="container-descri"><div><img src="https://http2.mlstatic.com/storage/catalog-technical-specs/images/assets/vectorial/default.svg" alt="cheked"></div><span>Garantia:</span><?php echo $garantia; ?></span></div>
                 </div>
 
                 <div class="container-conferir-caracteristicas">
@@ -418,9 +521,9 @@
                 <div class="container-vendedor">
                     <div class="container-foto-nome-vendeor">
                         <div class="container-foto-nome">
-                            <div class="foto-nome">1</div><!--aqui vai a foto da loja-->
-                            <div class="nome-vendedor"><span class="nome-do-vendedor"><strong>NEXT PC</strong> <!--aqui o nome-->
-                                <div><span style="font-size: 14px;">+100</span> <span style="color: grey; font-size: 14px;">Produtos</span></div>
+                            <div class="foto-nome"><img src="<?php echo $foto_loja; ?>" alt="Foto-loja"></div><!--aqui vai a foto da loja-->
+                            <div class="nome-vendedor"><span class="nome-do-vendedor"><strong><?php echo $nome_loja; ?></strong> <!--aqui o nome-->
+                                <div><span style="font-size: 14px;"><?php echo $quantidade_produtos_loja; ?></span> <span style="color: grey; font-size: 14px;">Produtos</span></div>
                             </span></div>
                         </div>
                         <div class="botao-seguir">
