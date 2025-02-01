@@ -18,58 +18,106 @@ $id_produto = isset($_GET['id']) ? $_GET['id'] : 1; // Pega o ID do produto da U
 $sql = "SELECT * FROM catalogo_produtos WHERE id = $id_produto";
 $resultado = $conn->query($sql);
 
+// Carregar todos os produtos em uma array
+$produtos = [];
+if ($resultado->num_rows > 0) {
+    while ($linha = $resultado->fetch_assoc()) {
+        $produtos[] = [
+            'id' => $linha['id'],
+            'nome' => $linha['nome'],
+            'imagem_url' => $linha['imagem_url'],
+            'preco_antigo' => $linha['preco_antigo'],
+            'preco_atual' => $linha['preco_atual'],
+            'desconto' => $linha['desconto'],
+            'parcelado_em' => $linha['parcelado_em'],
+            'valor_parcela' => $linha['valor_parcela'],
+            'frete_gratis' => $linha['frete_gratis'],
+            'foto_1' => $linha['foto_1'],
+            'foto_2' => $linha['foto_2'],
+            'foto_3' => $linha['foto_3'],
+            'foto_4' => $linha['foto_4'],
+            'foto_5' => $linha['foto_5'],
+            'foto_6' => $linha['foto_6'],
+            'foto_7' => $linha['foto_7'],
+            'chegara_dia' => $linha['chegara_dia'],
+            'retire_dia' => $linha['retire_dia'],
+            'foto_loja' => $linha['foto_loja'],
+            'nome_loja' => $linha['nome_loja'],
+            'quantidade_produtos_loja' => $linha['quantidade_produtos_loja'],
+            'quantidade_vendas_concluidas' => $linha['quantidade_vendas_concluidas'],
+            'nome_marca' => $linha['nome_marca'],
+            'linha_produto' => $linha['linha'],
+            'modelo' => $linha['modelo'],
+            'garantia' => $linha['garantia'],
+            'formato_venda' => $linha['formato_venda'],
+            'tipo_produto' => $linha['tipo_produto'],
+            'descricao' => $linha['descricao'],
+            'pergunta_comprador1' => $linha['pergunta_comprador1'],
+            'resposta_vendedor1' => $linha['resposta_vendedor1'],
+            'pergunta_comprador2' => $linha['pergunta_comprador2'],
+            'resposta_vendedor2' => $linha['resposta_vendedor2'],
+            'pergunta_comprador3' => $linha['pergunta_comprador3'],
+            'resposta_vendedor3' => $linha['resposta_vendedor3'],
+            'avaliacao_1' => $linha['avaliacao_1'],
+            'avaliacao_2' => $linha['avaliacao_2'],
+            'avaliacao_3' => $linha['avaliacao_3']
+        ];
+    }
+} else {
+    die("Produto não encontrado");
+}
+
+// Aqui você pode acessar os dados diretamente da array
+// Exemplo de como acessar os dados do produto:
+$produto = $produtos[0]; // Pegando o primeiro produto, se houver mais, você pode acessar como $produtos[1], $produtos[2], etc.
+
+// Agora vamos substituir as variáveis diretas por acessos ao array:
+$titulo_produto = $produto['nome'];
+$imagem_url = $produto['imagem_url'];
+$preco_antigo = $produto['preco_antigo'];
+$preco_atual = $produto['preco_atual'];
+$desconto = $produto['desconto'];
+$parcelado_em = $produto['parcelado_em'];
+$valor_parcela = $produto['valor_parcela'];
+$frete_gratis = $produto['frete_gratis'];
+$foto_1 = $produto['foto_1'];
+$foto_2 = $produto['foto_2'];
+$foto_3 = $produto['foto_3'];
+$foto_4 = $produto['foto_4'];
+$foto_5 = $produto['foto_5'];
+$foto_6 = $produto['foto_6'];
+$foto_7 = $produto['foto_7'];
+$chegara_dia = $produto['chegara_dia'];
+$retire_dia = $produto['retire_dia'];
+$foto_loja = $produto['foto_loja'];
+$nome_loja = $produto['nome_loja'];
+$quantidade_produtos_loja = $produto['quantidade_produtos_loja'];
+$quantidade_vendas_concluidas = $produto['quantidade_vendas_concluidas'];
+$nome_marca = $produto['nome_marca'];
+$linha_produto = $produto['linha_produto'];
+$modelo = $produto['modelo'];
+$garantia = $produto['garantia'];
+$formato_venda = $produto['formato_venda'];
+$tipo_produto = $produto['tipo_produto'];
+$descricao = $produto['descricao'];
+$pergunta_comprador1 = $produto['pergunta_comprador1'];
+$resposta_vendedor1 = $produto['resposta_vendedor1'];
+$pergunta_comprador2 = $produto['pergunta_comprador2'];
+$resposta_vendedor2 = $produto['resposta_vendedor2'];
+$pergunta_comprador3 = $produto['pergunta_comprador3'];
+$resposta_vendedor3 = $produto['resposta_vendedor3'];
+$avaliacao_1 = $produto['avaliacao_1'];
+$avaliacao_2 = $produto['avaliacao_2'];
+$avaliacao_3 = $produto['avaliacao_3'];
 
 // Consulta para os produtos "Inspirado no último visto"
 $sql_ultimos_produtos = "SELECT * FROM catalogo_produtos";
 $resultado_ultimos_produtos = $conn->query($sql_ultimos_produtos);
 
-// Verifica se há resultado
-if ($resultado->num_rows > 0) {
-    $linha = $resultado->fetch_assoc();
-    $titulo_produto = $linha['nome'];
-    $imagem_url = $linha['imagem_url'];
-    $preco_antigo = $linha['preco_antigo'];
-    $preco_atual = $linha['preco_atual'];
-    $desconto = $linha['desconto'];
-    $parcelado_em = $linha['parcelado_em'];
-    $valor_parcela = $linha['valor_parcela'];
-    $frete_gratis = $linha['frete_gratis'];
-    $foto_1 = $linha['foto_1'];
-    $foto_2 = $linha['foto_2'];
-    $foto_3 = $linha['foto_3'];
-    $foto_4 = $linha['foto_4'];
-    $foto_5 = $linha['foto_5'];
-    $foto_6 = $linha['foto_6'];
-    $foto_7 = $linha['foto_7'];
-    $chegara_dia = $linha['chegara_dia'];
-    $retire_dia = $linha['retire_dia'];
-    $foto_loja = $linha['foto_loja'];
-    $nome_loja = $linha['nome_loja'];
-    $quantidade_produtos_loja = $linha['quantidade_produtos_loja'];
-    $quantidade_vendas_concluidas = $linha['quantidade_vendas_concluidas'];
-    $nome_marca = $linha['nome_marca'];
-    $linha_produto = $linha['linha'];
-    $modelo = $linha['modelo'];
-    $garantia = $linha['garantia'];
-    $formato_venda = $linha['formato_venda'];
-    $tipo_produto = $linha['tipo_produto'];
-    $descricao = $linha['descricao'];
-    $pergunta_comprador1 = $linha['pergunta_comprador1'];
-    $resposta_vendedor1 = $linha['resposta_vendedor1'];
-    $pergunta_comprador2 = $linha['pergunta_comprador2'];
-    $resposta_vendedor2 = $linha['resposta_vendedor2'];
-    $pergunta_comprador3 = $linha['pergunta_comprador3'];
-    $resposta_vendedor3 = $linha['resposta_vendedor3'];
-    $avaliacao_1 = $linha['avaliacao_1'];
-    $avaliacao_2 = $linha['avaliacao_2'];
-    $avaliacao_3 = $linha['avaliacao_3'];
-} else {
-    die("Produto não encontrado");
-}
-
-// Fecha a conexão
+// Aqui a conexão pode ser fechada, pois já carregamos os dados
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -274,14 +322,14 @@ $conn->close();
 
 
     <!--TITULO ANUNCIO MOBILE-->
-    <h1 class="titulo-produto-mobile"><?php echo $titulo_produto; ?></h1>
+    <h1 class="titulo-produto-mobile"><?php echo $produto['nome']; ?></h1>
     <div class="container-produto-mobile"> 
         <div class="container-numero-foto-favorito">
             <div class="contador-foto"><span>3</span><span>/</span><span>5</span></div>
             <div class="favorito-mobile"><i class="material-icons">favorite</i></div>
         </div>
         <div class="foto-mobile">
-        <img src="<?php echo $foto_1; ?>" alt="Foto do Produto">
+        <img src="<?php echo $produto['foto_1']; ?>" alt="Foto do Produto">
         </div>
         <div class="container-compartilhar">
             <div></div>
@@ -296,55 +344,49 @@ $conn->close();
             <input type="radio" name="radio" id="radio-mobile">
         </div>
         <div class="container-valor-produto-mobile">
-            <div class="preco-antigo-mobile">
-                <s>
-                                <span class="antigo-cifrao-mobile-pag-produto">R$</span>
-                <span class="antigo-valor-produto-mobile">
-                    <?php echo number_format($preco_antigo, 0, ',', '.'); ?>
-                </span>
-                <span class="antigo-centavos">
-                    <?php 
-                    // Calculando os centavos
-                    $centavos = $preco_antigo - floor($preco_antigo);
-                    echo number_format($centavos * 100, 0, ',', '.');
-                    ?>
-                </span>
-                </s>
-            </div>
-        </div>
-        <div class="valor-atual-mobile">
-        <span class="cifrao-mobile">R$</span>
-                <span class="valor-atual-pag-mobile">
-                    <?php echo number_format($preco_atual, 0, ',', '.'); ?>
-                </span>
-                <span class="centavos-atual-mobile">
-                    <?php 
-                    // Calculando os centavos para o preço atual
-                    $centavos_atual = $preco_atual - floor($preco_atual);
-                    echo number_format($centavos_atual * 100, 0, ',', '.');
-                    ?>
-                </span>
-                <span class="desconto-mobile">
-                    <?php 
-                    // Exibindo o desconto em porcentagem
-                    echo $desconto . '%';
-                    ?>
-                </span>
-                <span class="desconto-mobile">OFF</span>
-        </div>
+    <div class="preco-antigo-mobile">
+        <s>
+            <span class="antigo-cifrao-mobile-pag-produto">R$</span>
+            <span class="antigo-valor-produto-mobile">
+                <?php echo $produtos[0]['preco_antigo']; // Acessando o preço antigo diretamente ?>
+            </span>
+            <span class="antigo-centavos">
+                <?php 
+                // Calculando os centavos diretamente
+                $centavos = $produtos[0]['preco_antigo'] - floor($produtos[0]['preco_antigo']);
+                echo (int)($centavos * 100); // Exibindo os centavos
+                ?>
+            </span>
+        </s>
+    </div>
+</div>
+<div class="valor-atual-mobile">
+    <span class="cifrao-mobile">R$</span>
+    <span class="valor-atual-pag-mobile">
+        <?php echo $produtos[0]['preco_atual']; ?>
+    </span>
+    <span class="centavos-atual-mobile">
+        <?php echo $produtos[0]['preco_atual'] - floor($produtos[0]['preco_atual']); ?>
+    </span>
+    <span class="desconto-mobile">
+        <?php echo $produtos[0]['desconto']; ?>
+    </span>
+    <span class="desconto-mobile">OFF</span>
+</div>
+
         <span class="pague-parcelado">Pague parcelado</span>
         <span class="link-azul-pequeno"><a href="#">Ver os meios de pagamento</a></span>
         <?php 
 // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
-if ($chegara_dia == 1) {
+if ($produtos[0]['chegara_dia'] == 1) {
     echo '<span class="data-entrega-mobile">Chegará entre dia 6 e 11/fev</span>';
 }
 
 // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
-if ($retire_dia == 1) {
+if ($produtos[0]['retire_dia'] == 1) {
     echo '<span class="data-entrega-rapida-mobile">Chegará entre sexta-feira e quarta-feira 5/fev</span>';
 }
-?>
+?> 
         <span class="link-azul-pequeno"><a href="#">Mais formas de entrega</a></span>
         <div class="container-estoque-disponivel-mobile">
             <p>Estoque disponível</p>
@@ -790,40 +832,40 @@ if ($retire_dia == 1) {
 
 
                 <!-- Seção de Produtos Relacionados -->
-    <!-- Bloco de exibição dos produtos relacionados -->
-<?php
-if ($resultado_ultimos_produtos->num_rows > 0) {
-    echo "<h2 style='font-weight: 300;'>Produtos relacionados</h2>";
-    echo "<p style='font-size: 14px; color: gray;'>Patrocinado</p>";
-    
-    echo "<div class='produtos-relacionados2'>";
-    while ($linha = $resultado_ultimos_produtos->fetch_assoc()) {
-        echo "<div class='container-produto'>";
-        echo "    <div class='foto-produto'><img src='" . htmlspecialchars($linha['imagem_url']) . "' alt='Produto'></div>";
-        echo "    <div class='titulo-valor-condicoes'>";
-        echo "        <div class='valor-desconto-centavos' style='margin-top: 20px;'>";
-        echo "            <span class='cifrao1'>R$</span><span class='valor1'>" . $linha['preco_atual'] . "</span><span class='centavos1'>00</span><span class='desconto1'>" . $linha['desconto'] . "% OFF</span>";
-        echo "        </div>";
-        echo "        <div class='parcelado' style='margin-top: 5px;'>";
-        echo "            <span class='parcelado-em-vezes'>em</span><span class='quantidades-parcelas'>" . $linha['parcelado_em'] . "x</span><span class='cifrao-valor-da-parcela'>R$</span><span class='valor-parcela'>" . $linha['valor_parcela'] . "</span>";
-        echo "        </div>";
-        echo "        <div class='texto-produto-relacionado-container' style='margin-top: 20px;'>";
-        echo "            <span class='frete-gratis' style='color: #00A650; font-size: 14px;'>" . ($linha['frete_gratis'] ? 'Frete grátis' : 'Frete não incluso') . "</span><span style='color: grey; font-size: 14px;'> por ser sua primeira compra</span>";
-        echo "        </div>";
-        echo "        <div class='titulo-produto-relacionados' style='font-size: 14px; margin-top: 10px;'>";
-        echo "            <span class='titulo-produto-relacionado'>" . htmlspecialchars($linha['nome']) . "</span>";
-        echo "        </div>";
-        echo "    </div>";
-        echo "</div>";
+    <?php
+    // Verifica se há produtos relacionados na consulta
+    if ($resultado_ultimos_produtos->num_rows > 0) {
+        // Título e descrição da seção
+        echo "<h2 style='font-weight: 300;'>Produtos relacionados</h2>";
+        echo "<p style='font-size: 14px; color: gray;'>Patrocinado</p>";
+        
+        // Inicia o container dos produtos relacionados
+        echo "<div class='produtos-relacionados2'>";
+        
+        while ($linha = $resultado_ultimos_produtos->fetch_assoc()) {
+            // Exibe cada produto
+            echo "<div class='container-produto'>";
+            echo "    <div class='foto-produto'><img src='" . htmlspecialchars($linha['imagem_url']) . "' alt='Produto'></div>";
+            echo "    <div class='titulo-valor-condicoes'>";
+            echo "        <div class='valor-desconto-centavos' style='margin-top: 20px;'>";
+            echo "            <span class='cifrao1'>R$</span><span class='valor1'>" . $linha['preco_atual'] . "</span><span class='centavos1'>00</span><span class='desconto1'>" . $linha['desconto'] . "% OFF</span>";
+            echo "        </div>";
+            echo "        <div class='parcelado' style='margin-top: 5px;'>";
+            echo "            <span class='parcelado-em-vezes'>em</span><span class='quantidades-parcelas'>" . $linha['parcelado_em'] . "x</span><span class='cifrao-valor-da-parcela'>R$</span><span class='valor-parcela'>" . $linha['valor_parcela'] . "</span>";
+            echo "        </div>";
+            echo "        <div class='texto-produto-relacionado-container' style='margin-top: 20px;'>";
+            echo "            <span class='frete-gratis' style='color: #00A650; font-size: 14px;'>" . ($linha['frete_gratis'] ? 'Frete grátis' : 'Frete não incluso') . "</span><span style='color: grey; font-size: 14px;'> por ser sua primeira compra</span>";
+            echo "        </div>";
+            echo "        <div class='titulo-produto-relacionados' style='font-size: 14px; margin-top: 10px;'>";
+            echo "            <span class='titulo-produto-relacionado'>" . htmlspecialchars($linha['nome']) . "</span>";
+            echo "        </div>";
+            echo "    </div>";
+            echo "</div>";
+        }
+        echo "</div>"; // Fim do container de produtos relacionados
+    } else {
+        echo "<p>Nenhum produto encontrado.</p>";
     }
-    echo "</div>";
-} else {
-    echo "<p>Nenhum produto encontrado.</p>";
-}
-
-// Agora que já processou todos os dados, feche a conexão.
-$conn->close();
-?>
     ?>
 
     <!-- Resto da página, como footer -->
