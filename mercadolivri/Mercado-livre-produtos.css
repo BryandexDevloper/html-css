@@ -133,6 +133,18 @@ main{
     gap: 10px;
 }
 
+.produtos-relacionados2{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 10px;
+    gap: 10px;
+}
+
 .container-produto{
     border: 1px solid grey;
     width:200px;
