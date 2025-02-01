@@ -790,40 +790,40 @@ if ($retire_dia == 1) {
 
 
                 <!-- Seção de Produtos Relacionados -->
-    <?php
-    // Verifica se há produtos relacionados na consulta
-    if ($resultado_ultimos_produtos->num_rows > 0) {
-        // Título e descrição da seção
-        echo "<h2 style='font-weight: 300;'>Produtos relacionados</h2>";
-        echo "<p style='font-size: 14px; color: gray;'>Patrocinado</p>";
-        
-        // Inicia o container dos produtos relacionados
-        echo "<div class='produtos-relacionados2'>";
-        
-        while ($linha = $resultado_ultimos_produtos->fetch_assoc()) {
-            // Exibe cada produto
-            echo "<div class='container-produto'>";
-            echo "    <div class='foto-produto'><img src='" . htmlspecialchars($linha['imagem_url']) . "' alt='Produto'></div>";
-            echo "    <div class='titulo-valor-condicoes'>";
-            echo "        <div class='valor-desconto-centavos' style='margin-top: 20px;'>";
-            echo "            <span class='cifrao1'>R$</span><span class='valor1'>" . $linha['preco_atual'] . "</span><span class='centavos1'>00</span><span class='desconto1'>" . $linha['desconto'] . "% OFF</span>";
-            echo "        </div>";
-            echo "        <div class='parcelado' style='margin-top: 5px;'>";
-            echo "            <span class='parcelado-em-vezes'>em</span><span class='quantidades-parcelas'>" . $linha['parcelado_em'] . "x</span><span class='cifrao-valor-da-parcela'>R$</span><span class='valor-parcela'>" . $linha['valor_parcela'] . "</span>";
-            echo "        </div>";
-            echo "        <div class='texto-produto-relacionado-container' style='margin-top: 20px;'>";
-            echo "            <span class='frete-gratis' style='color: #00A650; font-size: 14px;'>" . ($linha['frete_gratis'] ? 'Frete grátis' : 'Frete não incluso') . "</span><span style='color: grey; font-size: 14px;'> por ser sua primeira compra</span>";
-            echo "        </div>";
-            echo "        <div class='titulo-produto-relacionados' style='font-size: 14px; margin-top: 10px;'>";
-            echo "            <span class='titulo-produto-relacionado'>" . htmlspecialchars($linha['nome']) . "</span>";
-            echo "        </div>";
-            echo "    </div>";
-            echo "</div>";
-        }
-        echo "</div>"; // Fim do container de produtos relacionados
-    } else {
-        echo "<p>Nenhum produto encontrado.</p>";
+    <!-- Bloco de exibição dos produtos relacionados -->
+<?php
+if ($resultado_ultimos_produtos->num_rows > 0) {
+    echo "<h2 style='font-weight: 300;'>Produtos relacionados</h2>";
+    echo "<p style='font-size: 14px; color: gray;'>Patrocinado</p>";
+    
+    echo "<div class='produtos-relacionados2'>";
+    while ($linha = $resultado_ultimos_produtos->fetch_assoc()) {
+        echo "<div class='container-produto'>";
+        echo "    <div class='foto-produto'><img src='" . htmlspecialchars($linha['imagem_url']) . "' alt='Produto'></div>";
+        echo "    <div class='titulo-valor-condicoes'>";
+        echo "        <div class='valor-desconto-centavos' style='margin-top: 20px;'>";
+        echo "            <span class='cifrao1'>R$</span><span class='valor1'>" . $linha['preco_atual'] . "</span><span class='centavos1'>00</span><span class='desconto1'>" . $linha['desconto'] . "% OFF</span>";
+        echo "        </div>";
+        echo "        <div class='parcelado' style='margin-top: 5px;'>";
+        echo "            <span class='parcelado-em-vezes'>em</span><span class='quantidades-parcelas'>" . $linha['parcelado_em'] . "x</span><span class='cifrao-valor-da-parcela'>R$</span><span class='valor-parcela'>" . $linha['valor_parcela'] . "</span>";
+        echo "        </div>";
+        echo "        <div class='texto-produto-relacionado-container' style='margin-top: 20px;'>";
+        echo "            <span class='frete-gratis' style='color: #00A650; font-size: 14px;'>" . ($linha['frete_gratis'] ? 'Frete grátis' : 'Frete não incluso') . "</span><span style='color: grey; font-size: 14px;'> por ser sua primeira compra</span>";
+        echo "        </div>";
+        echo "        <div class='titulo-produto-relacionados' style='font-size: 14px; margin-top: 10px;'>";
+        echo "            <span class='titulo-produto-relacionado'>" . htmlspecialchars($linha['nome']) . "</span>";
+        echo "        </div>";
+        echo "    </div>";
+        echo "</div>";
     }
+    echo "</div>";
+} else {
+    echo "<p>Nenhum produto encontrado.</p>";
+}
+
+// Agora que já processou todos os dados, feche a conexão.
+$conn->close();
+?>
     ?>
 
     <!-- Resto da página, como footer -->
