@@ -405,114 +405,114 @@ if ($retire_dia == 1) {
                 <span class="pequeno-grey">Patrocinado</span>
                 <div class="produtos-relacionados">
                     <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
                         <div class="titulo-valor-condicoes">
                             <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
                             </div>
                             <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
                             </div>
                             <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
                             </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
                         </div>
                     </div>
 
                     <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
                         <div class="titulo-valor-condicoes">
                             <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
                             </div>
                             <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
                             </div>
                             <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
                             </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
+                        </div>
+                    </div>
+
+                    <<div class="container-produto"><!--produto em sí-->
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
+                        <div class="titulo-valor-condicoes">
+                            <div class="valor-desconto-centavos" style="margin-top: 20px;">
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
+                            </div>
+                            <div class="parcelado" style="margin-top: 5px;" >
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
+                            </div>
+                            <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                            </div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
                         </div>
                     </div>
 
                     <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
                         <div class="titulo-valor-condicoes">
                             <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
                             </div>
                             <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
                             </div>
                             <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
                             </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
                         </div>
                     </div>
 
                     <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
                         <div class="titulo-valor-condicoes">
                             <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
                             </div>
                             <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
                             </div>
                             <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
                             </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
                         </div>
                     </div>
 
                     <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
                         <div class="titulo-valor-condicoes">
                             <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
                             </div>
                             <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
                             </div>
                             <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
                             </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
                         </div>
                     </div>
 
                     <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
+                        <div class="foto-produto"><img src="<?php echo $imagem_url; ?>" alt=""></div>
                         <div class="titulo-valor-condicoes">
                             <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
+                                <span class="cifrao1">R$</span><span class="valor1"><?php echo $preco_atual; ?></span><span class="centavos1">00</span><span class="desconto1"><?php echo $desconto; ?>% OFF</span>
                             </div>
                             <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
+                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas"><?php echo $parcelado_em; ?>x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela"><?php echo $valor_parcela; ?></span>
                             </div>
                             <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
+                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;"><?php echo $frete_gratis; ?></span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
                             </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
-                        </div>
-                    </div>
-
-                    <div class="container-produto"><!--produto em sí-->
-                        <div class="foto-produto"><img src="" alt=""></div>
-                        <div class="titulo-valor-condicoes">
-                            <div class="valor-desconto-centavos" style="margin-top: 20px;">
-                                <span class="cifrao1">R$</span><span class="valor1">112</span><span class="centavos1">00</span><span class="desconto1">30% OFF</span>
-                            </div>
-                            <div class="parcelado" style="margin-top: 5px;" >
-                                <span class="parcelado-em-vezes">em</span><span class="quantidades-parcelas">12x</span><span class="cifrao-valor-da-parcela">R$</span><span class="valor-parcela">22,43</span>
-                            </div>
-                            <div class="texto-produto-relacionado-container" style="margin-top: 20px;">
-                                <span class="frete-gratis" style="color: #00A650; font-size: 14px;">Frete grátis</span><span style="color: grey; font-size: 14px;"> por ser sua primeira compra</span>
-                            </div>
-                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado">Aqui vaio titulo do seu produto</span></div>
+                            <div class="titulo-produto-relacionados" style="font-size: 14px; margin-top: 10px;"><span class="titulo-produto-relacionado"><?php echo $titulo_produto; ?></span></div>
                         </div>
                     </div>
                         <!--Coloca os produtos aqui-->
@@ -1726,6 +1726,36 @@ if ($retire_dia == 1) {
 
 
 </main>
+
+
+
+
+<!--Script Menu Hamburguer-->
+
+<script>
+    function clickMenu() {
+        // Seleciona o elemento do menu
+        const menucelular = document.getElementById('menucelular');
+        
+        // Verifica se o elemento existe
+        if (!menucelular) {
+            console.error('Elemento com o ID "menucelular" não encontrado.');
+            return;
+        }
+
+        // Alterna a exibição do menu
+        if (menucelular.style.display === 'block') {
+            menucelular.style.display = 'none';
+        } else {
+            menucelular.style.display = 'block';
+        }
+    }
+</script>
+
+<!--Fim script menu-->
+
+
+
 
 
 
