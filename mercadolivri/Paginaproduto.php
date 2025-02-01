@@ -786,9 +786,7 @@ if ($retire_dia == 1) {
             <hr>
             <!--area container dos prdutos relacionados com fotos-->
             <div class="container-produtos-relacionados-comentarios"><!--container produtos relacionados-->
-                <h2 style="font-weight: 300;">Produtos relacionados</h2>
-                <p style="font-size: 14px; color: gray;">Patrocinado</p>
-
+                
 
 
                 <!-- Seção de Produtos Relacionados -->
