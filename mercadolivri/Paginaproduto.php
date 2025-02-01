@@ -794,7 +794,7 @@ if ($retire_dia == 1) {
                 <!-- Seção de Produtos Relacionados -->
     <?php
     // Verifica se há produtos relacionados na consulta
-    if ($resultado_produtos_relacionados->num_rows > 0) {
+    if ($resultado_ultimos_produtos->num_rows > 0) {
         // Título e descrição da seção
         echo "<h2 style='font-weight: 300;'>Produtos relacionados</h2>";
         echo "<p style='font-size: 14px; color: gray;'>Patrocinado</p>";
@@ -802,7 +802,7 @@ if ($retire_dia == 1) {
         // Inicia o container dos produtos relacionados
         echo "<div class='produtos-relacionados2'>";
         
-        while ($linha = $resultado_produtos_relacionados->fetch_assoc()) {
+        while ($linha = $resultado_ultimos_produtos->fetch_assoc()) {
             // Exibe cada produto
             echo "<div class='container-produto'>";
             echo "    <div class='foto-produto'><img src='" . htmlspecialchars($linha['imagem_url']) . "' alt='Produto'></div>";
