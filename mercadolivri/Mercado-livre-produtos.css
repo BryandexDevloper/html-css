@@ -79,7 +79,7 @@ main{
 .foto-produto-comprar img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 
@@ -91,7 +91,7 @@ main{
 .foto-grande-img img{
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /**Container de informaçoes abaixo da foto**/
@@ -758,7 +758,7 @@ caption{
 .foto-nome img{
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .nome-vendedor{
@@ -990,7 +990,7 @@ caption{
 
   .foto-mobile img{
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     height: auto;
   }
   .container-radio{
@@ -1213,6 +1213,7 @@ caption{
 
 .container-descri div img{
     width:100%;
+    height: auto;
        
 }
 
@@ -1397,7 +1398,7 @@ main{
 .foto-produto-comprar img{
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .container-metodo-pagamento{
