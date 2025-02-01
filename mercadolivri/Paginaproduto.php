@@ -991,11 +991,11 @@ if ($retire_dia == 1) {
                         <table>
                            <tr>
                             <th>Marca</th>
-                            <td class="marca"><?php echo $marca; ?></td>
+                            <td class="marca"><?php echo $nome_marca; ?></td>
                            </tr>
                            <tr>
                             <th>Linha</th>
-                            <td class="linha"><?php echo $linha; ?></td>
+                            <td class="linha"><?php echo $linha_produto; ?></td>
                            </tr>
                            <tr>
                             <th>Modelo</th>
@@ -1153,13 +1153,13 @@ if ($retire_dia == 1) {
                                             <h3 style="font-weight: 500; font-size: 18px; margin-top: 50px;">últimas perguntas feitas</h3>
                                             <!--classe perguntas e respostas-->
                                             <div class="pergunta">
-                                                <span class="pergunta"><?php echo $pergunta_1; ?></span>
-                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_1; ?></span></div>  
+                                                <span class="pergunta"><?php echo $pergunta_comprador1; ?></span>
+                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_vendedor1; ?></span></div>  
                                             </div><!--perguntas terminam aqui-->
                                             
                                             <div class="pergunta">
-                                                <span class="pergunta"><?php echo $pergunta_2; ?></span>
-                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_2; ?></span></div>  
+                                                <span class="pergunta"><?php echo $pergunta_comprador2; ?></span>
+                                                <div style="display: flex; margin-top: 10px;"><span style="padding-right: 10px; color: gray;">L</span><span class="resposta" style="color: grey; font-size: 14px;" ><?php echo $resposta_vendedor2; ?></span></div>  
                                             </div><!--perguntas terminam aqui-->
 
                                             <a href="#" style="font-size: 14px; color: dodgerblue; text-decoration: none;">Ver todas as perguntas</a>
@@ -1332,7 +1332,7 @@ if ($retire_dia == 1) {
     <div class="informacoes-comprar"><!--container-->
         <div class="container-informacoes"><!--arredondamento do container e conteudo-->
             <div class="novo-usado-vendidos"><!--primeira coluna-->
-                <div class="quantidade-vendidas"><span>Novo</span><div style="width: 1px; height: 15px; background-color: grey;"></div><span>+100 vendidos</span></div>
+                <div class="quantidade-vendidas"><span>Novo</span><div style="width: 1px; height: 15px; background-color: grey;"></div><span>+<?php echo $quantidade_produtos_loja; ?></span></div>
                 <div class="coracao"><i class="material-icons">favorite</i></div>
             </div>
             <h1 class="titulo-produto"><?php echo $titulo_produto; ?></h1>
@@ -1367,26 +1367,22 @@ if ($retire_dia == 1) {
                 <p>em <span class="parcelado"><?php echo $parcelado_em; ?>x</span>R$ <?php echo $valor_parcela; ?><span class="centavos">67</span> sem juros</p>
                 <a href="#">Ver meios de pagamento</a>
                 </div>
-                                <?php 
-                // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem de entrega
-                if ($chegara_dia == 1) {
-                    echo '<div class="container-prazo-entrega">';
-                    echo '<span class="chegara-dia" style="color:rgb(0, 166, 80);">Chegará grátis amanhã</span>';
-                    echo '<span>por ser sua primeira compra</span>';
-                    echo '<span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">Comprando dentro das próximas ' . $tempo_frete . '</span>';  // Aqui você pode substituir $tempo_frete por uma variável de tempo do banco ou calcular o tempo restante
-                    echo '<a href="#" style="margin-top: 5px; font-size: 14px;">mais formas de entrega</a>';
-                    echo '</div>';
-                }
+                <div class="container-prazo-entrega">
+                    <span class="chegara-dia" style="color:rgb(0, 166, 80);">Chegará grátis amanhã</span>
+                    <span>por ser sua primeira compra</span>
+                    <span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">
+                        Comprando dentro das próximas 17h 7min
+                    </span>
+                    <a href="#" style="margin-top: 5px; font-size: 14px;">mais formas de entrega</a>
+                </div>
 
-                // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem de retirada
-                if ($retire_dia == 1) {
-                    echo '<div class="container-retire-tal-dia">';
-                    echo '<span class="retire-tal-dia" style="color: rgb(0,166,80);">Retire grátis a partir de amanhã</span><span> em uma agência Mercado Livre</span>';
-                    echo '<span style="font-size: 14px; color: gray;"><br>Comprando dentro das próximas</span>';
-                    echo '<span style="font-size: 14px;">' . $tempo_retirada . '</span>';  // Aqui também, substitua $tempo_retirada pela variável que você deseja mostrar
-                    echo '</div>';
-                }
-                ?>
+                <div class="container-retire-tal-dia">
+                    <span class="retire-tal-dia" style="color: rgb(0,166,80);">Retire grátis a partir de amanhã</span>
+                    <span> em uma agência Mercado Livre</span>
+                    <span style="font-size: 14px; color: gray;"><br>Comprando dentro das próximas</span>
+                    <span style="font-size: 14px;">16h 57min</span>
+                </div>
+
 
 
                 <div class="container-estoque-disponivel">
