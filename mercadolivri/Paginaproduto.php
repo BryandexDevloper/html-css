@@ -322,6 +322,7 @@ $conn->close();
 
 
     <!--TITULO ANUNCIO MOBILE-->
+    <?php foreach ($produtos as $produto): ?>
     <h1 class="titulo-produto-mobile"><?php echo $produto['nome']; ?></h1>
     <div class="container-produto-mobile"> 
         <div class="container-numero-foto-favorito">
@@ -344,49 +345,51 @@ $conn->close();
             <input type="radio" name="radio" id="radio-mobile">
         </div>
         <div class="container-valor-produto-mobile">
-    <div class="preco-antigo-mobile">
-        <s>
-            <span class="antigo-cifrao-mobile-pag-produto">R$</span>
-            <span class="antigo-valor-produto-mobile">
-                <?php echo $produtos[0]['preco_antigo']; // Acessando o preço antigo diretamente ?>
-            </span>
-            <span class="antigo-centavos">
-                <?php 
-                // Calculando os centavos diretamente
-                $centavos = $produtos[0]['preco_antigo'] - floor($produtos[0]['preco_antigo']);
-                echo (int)($centavos * 100); // Exibindo os centavos
-                ?>
-            </span>
-        </s>
-    </div>
+        <div class="preco-antigo-mobile">
+                <s>
+                    <span class="antigo-cifrao-mobile-pag-produto">R$</span>
+                    <span class="antigo-valor-produto-mobile">
+                        <?php echo $produto['preco_antigo']; // Acessando o preço antigo diretamente ?>
+                    </span>
+                    <span class="antigo-centavos">
+                        <?php 
+                        // Calculando os centavos diretamente
+                        $centavos = $produto['preco_antigo'] - floor($produto['preco_antigo']);
+                        echo (int)($centavos * 100); // Exibindo os centavos
+                        ?>
+                    </span>
+                </s>
+            </div>
 </div>
-<div class="valor-atual-mobile">
-    <span class="cifrao-mobile">R$</span>
-    <span class="valor-atual-pag-mobile">
-        <?php echo $produtos[0]['preco_atual']; ?>
-    </span>
-    <span class="centavos-atual-mobile">
-        <?php echo $produtos[0]['preco_atual'] - floor($produtos[0]['preco_atual']); ?>
-    </span>
-    <span class="desconto-mobile">
-        <?php echo $produtos[0]['desconto']; ?>
-    </span>
-    <span class="desconto-mobile">OFF</span>
-</div>
+        <div class="valor-atual-mobile">
+            <span class="cifrao-mobile">R$</span>
+            <span class="valor-atual-pag-mobile">
+                <?php echo $produto['preco_atual']; ?>
+            </span>
+            <span class="centavos-atual-mobile">
+                <?php echo $produto['preco_atual'] - floor($produto['preco_atual']); ?>
+            </span>
+            <span class="desconto-mobile">
+                <?php echo $produto['desconto']; ?>
+            </span>
+            <span class="desconto-mobile">OFF</span>
+        </div>
 
         <span class="pague-parcelado">Pague parcelado</span>
         <span class="link-azul-pequeno"><a href="#">Ver os meios de pagamento</a></span>
         <?php 
-// Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
-if ($produtos[0]['chegara_dia'] == 1) {
-    echo '<span class="data-entrega-mobile">Chegará entre dia 6 e 11/fev</span>';
-}
+        // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
+        if ($produto['chegara_dia'] == 1) {
+            echo '<span class="data-entrega-mobile">Chegará entre dia 6 e 11/fev</span>';
+        }
 
-// Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
-if ($produtos[0]['retire_dia'] == 1) {
-    echo '<span class="data-entrega-rapida-mobile">Chegará entre sexta-feira e quarta-feira 5/fev</span>';
-}
-?> 
+        // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
+        if ($produto['retire_dia'] == 1) {
+            echo '<span class="data-entrega-rapida-mobile">Chegará entre sexta-feira e quarta-feira 5/fev</span>';
+        }
+        ?> 
+<?php endforeach; ?>
+
         <span class="link-azul-pequeno"><a href="#">Mais formas de entrega</a></span>
         <div class="container-estoque-disponivel-mobile">
             <p>Estoque disponível</p>
