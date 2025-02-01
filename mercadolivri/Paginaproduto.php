@@ -18,6 +18,11 @@ $id_produto = isset($_GET['id']) ? $_GET['id'] : 1; // Pega o ID do produto da U
 $sql = "SELECT * FROM catalogo_produtos WHERE id = $id_produto";
 $resultado = $conn->query($sql);
 
+
+// Consulta para os produtos "Inspirado no último visto"
+$sql_ultimos_produtos = "SELECT * FROM catalogo_produtos";
+$resultado_ultimos_produtos = $conn->query($sql_ultimos_produtos);
+
 // Verifica se há resultado
 if ($resultado->num_rows > 0) {
     $linha = $resultado->fetch_assoc();
