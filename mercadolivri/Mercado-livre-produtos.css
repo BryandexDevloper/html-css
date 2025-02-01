@@ -156,6 +156,12 @@ main{
     border-bottom: 1px solid grey;
 }
 
+.foto-produto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .titulo-valor-condicoes{
 display: flex;
 flex-direction: column;
@@ -258,6 +264,12 @@ padding-right: 3px;
     height: 116px;
     padding:3px;
     
+}
+
+.foto-produto-vendedor img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .texto-produto-vendedor{
@@ -1396,7 +1408,7 @@ main{
 
 .foto-produto-comprar img{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
