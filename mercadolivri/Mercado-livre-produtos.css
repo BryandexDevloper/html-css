@@ -78,7 +78,7 @@ main{
 
 .foto-produto-comprar img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -90,7 +90,7 @@ main{
 
 .foto-grande-img img{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -429,7 +429,7 @@ caption{
 }
 
 .container-estrelas{
-    display: flex;
+    display: flex;   
     gap: 10px;
 }
 
@@ -757,7 +757,7 @@ caption{
 
 .foto-nome img{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -990,6 +990,7 @@ caption{
 
   .foto-mobile img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     height: auto;
   }
