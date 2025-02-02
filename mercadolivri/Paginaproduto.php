@@ -1246,7 +1246,7 @@ if ($resultado_produtos_ultimo_visto->num_rows > 0) {
 
         </div>
         
-    </div>
+    </div> 
     <div class="informacoes-comprar"><!--container-->
         <div class="container-informacoes"><!--arredondamento do container e conteudo-->
             <div class="novo-usado-vendidos"><!--primeira coluna-->
@@ -1281,11 +1281,15 @@ if ($resultado_produtos_ultimo_visto->num_rows > 0) {
                   <span class="quantidade-comentarios">(11)</span>
                   
             </div>
-                <div class="valor-parcela"><span class="cifrao">R$</span><span class="valor"><?php echo $preco_atual; ?></span> <br>
-                <p>em <span class="parcelado"><?php echo $parcelado_em; ?>x</span>R$ <?php echo $valor_parcela; ?><span class="centavos">67</span> sem juros</p>
+            <div class="valor-parcela">
+                <span class="cifrao">R$</span>
+                <span class="valor"><?php echo $preco_atual; ?></span>
+                <br>
+                <p>em <span class="parcelado"><?php echo $parcelado_em; ?>x</span> R$ <?php echo $valor_parcela; ?><span class="centavos">67</span> sem juros</p>
                 <a href="#">Ver meios de pagamento</a>
-                </div>
-                <div class="container-prazo-entrega">
+            </div>
+
+                            <div class="container-prazo-entrega">
                     <span class="chegara-dia" style="color:rgb(0, 166, 80);">Chegará grátis amanhã</span>
                     <span>por ser sua primeira compra</span>
                     <span class="dia-para-frete-gratis" style="font-size: 14px; color: grey; margin-top: 10px;">
@@ -1301,6 +1305,17 @@ if ($resultado_produtos_ultimo_visto->num_rows > 0) {
                     <span style="font-size: 14px;">16h 57min</span>
                 </div>
 
+                                    <?php
+                    // Verifica se a coluna 'chegara_dia' no banco é 1, e exibe a mensagem
+                    if ($chegara_dia == 1) {
+                        echo '<span class="data-entrega">Chegará entre dia 6 e 11/fev</span>';
+                    }
+
+                    // Verifica se a coluna 'retire_dia' no banco é 1, e exibe a mensagem
+                    if ($retire_dia == 1) {
+                        echo '<span class="data-entrega-rapida">Chegará entre sexta-feira e quarta-feira 5/fev</span>';
+                    }
+                    ?>
 
 
                 <div class="container-estoque-disponivel">
