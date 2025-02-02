@@ -299,23 +299,44 @@ $conn->close();
     <h1 class="titulo-produto-mobile"><?php echo $titulo_produto; ?></h1>
     <div class="container-produto-mobile"> 
         <div class="container-numero-foto-favorito">
-            <div class="contador-foto"><span>3</span><span>/</span><span>5</span></div>
+            <div class="contador-foto"><span id="foto-atual">3</span><span>/</span><span id="total-fotos" >5</span></div>
             <div class="favorito-mobile"><i class="material-icons">favorite</i></div>
         </div>
-        <div class="foto-mobile">
-        <img src="<?php echo $foto_1; ?>" alt="Foto do Produto">
+                <div class="foto-mobile">
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_1; ?>" alt="Foto 1">
+            </div>
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_2; ?>" alt="Foto 2">
+            </div>
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_3; ?>" alt="Foto 3">
+            </div>
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_4; ?>" alt="Foto 4">
+            </div>
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_5; ?>" alt="Foto 5">
+            </div>
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_6; ?>" alt="Foto 6">
+            </div>
+            <div class="foto-produto23">
+                <img src="<?php echo $foto_7; ?>" alt="Foto 7">
+            </div>
         </div>
+
         <div class="container-compartilhar">
             <div></div>
             <div><i class="material-icons">share</i></div>
         </div>
         <div class="container-radio">
             <label for="radio-mobile"></label>
-            <input type="radio" name="radio" id="radio-mobile">
-            <input type="radio" name="radio" id="radio-mobile">
-            <input type="radio" name="radio" id="radio-mobile">
-            <input type="radio" name="radio" id="radio-mobile">
-            <input type="radio" name="radio" id="radio-mobile">
+            <input type="radio" name="radio" id="radio-1">
+            <input type="radio" name="radio" id="radio-2">
+            <input type="radio" name="radio" id="radio-3">
+            <input type="radio" name="radio" id="radio-4">
+            <input type="radio" name="radio" id="radio-5">
         </div>
         <div class="container-valor-produto-mobile">
             <div class="preco-antigo-mobile">
@@ -520,29 +541,29 @@ if ($retire_dia == 1) {
                 </div>
                 <hr style="margin-bottom: 50px;margin-top: 50px;">
                 <h2 style="font-weight: 500;font-size: 20px;">Fotos do produto</h2>
-                <div class="caixa-foto-produto">
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_1; ?>" alt="Foto 1" />
-                    </div>
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_2; ?>" alt="Foto 2" />
-                    </div>
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_3; ?>" alt="Foto 3" />
-                    </div>
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_4; ?>" alt="Foto 4" />
-                    </div>
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_5; ?>" alt="Foto 5" />
-                    </div>
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_6; ?>" alt="Foto 6" />
-                    </div>
-                    <div class="foto-produto-comprar">
-                        <img src="<?php echo $foto_7; ?>" alt="Foto 7" />
-                    </div>
-                </div>  
+                                    <div class="caixa-foto-produto">
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_1; ?>">
+                            <img src="<?php echo $foto_1; ?>" alt="Foto 1" />
+                        </div>
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_2; ?>">
+                            <img src="<?php echo $foto_2; ?>" alt="Foto 2" />
+                        </div>
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_3; ?>">
+                            <img src="<?php echo $foto_3; ?>" alt="Foto 3" />
+                        </div>
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_4; ?>">
+                            <img src="<?php echo $foto_4; ?>" alt="Foto 4" />
+                        </div>
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_5; ?>">
+                            <img src="<?php echo $foto_5; ?>" alt="Foto 5" />
+                        </div>
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_6; ?>">
+                            <img src="<?php echo $foto_6; ?>" alt="Foto 6" />
+                        </div>
+                        <div class="foto-produto-comprar" data-foto="<?php echo $foto_7; ?>">
+                            <img src="<?php echo $foto_7; ?>" alt="Foto 7" />
+                        </div>
+                    </div>  
             </div>
             <div class="container-descircao-produto">
                 <h2 style="font-weight: 500; margin-top: 40px; font-size: 20px;">Descrição</h2>
@@ -794,17 +815,29 @@ if ($retire_dia == 1) {
     <!-- conteudo pc-->
 <div class="pag-produtos">
     <div class="foto-produto-galeria">
-        <div class="caixa-foto-produto">
-            <div class="foto-produto-comprar"><img src="<?php echo $foto_1; ?>" alt="Foto-do-produto"></div>
-            <div class="foto-produto-comprar"><img src="<?php echo $foto_2; ?>" alt="Foto-do-produto"></div>
-            <div class="foto-produto-comprar"><img src="<?php echo $foto_3; ?>" alt="Foto-do-produto"></div>
-            <div class="foto-produto-comprar"><img src="<?php echo $foto_4; ?>" alt="Foto-do-produto"></div>
-            <div class="foto-produto-comprar"><img src="<?php echo $foto_5; ?>" alt="Foto-do-produto"></div>
-            <div class="foto-produto-comprar"><img src="<?php echo $foto_6; ?>" alt="Foto-do-produto"></div>
-        </div>
+    <div class="caixa-foto-produto">
+    <div class="foto-produto-comprar" data-foto="<?php echo $foto_1; ?>" onmouseover="mudarImagem('<?php echo $foto_1; ?>')" onclick="mudarImagem('<?php echo $foto_1; ?>')">
+        <img src="<?php echo $foto_1; ?>" alt="Foto-do-produto">
+    </div>
+    <div class="foto-produto-comprar" data-foto="<?php echo $foto_2; ?>" onmouseover="mudarImagem('<?php echo $foto_2; ?>')" onclick="mudarImagem('<?php echo $foto_2; ?>')">
+        <img src="<?php echo $foto_2; ?>" alt="Foto-do-produto">
+    </div>
+    <div class="foto-produto-comprar" data-foto="<?php echo $foto_3; ?>" onmouseover="mudarImagem('<?php echo $foto_3; ?>')" onclick="mudarImagem('<?php echo $foto_3; ?>')">
+        <img src="<?php echo $foto_3; ?>" alt="Foto-do-produto">
+    </div>
+    <div class="foto-produto-comprar" data-foto="<?php echo $foto_4; ?>" onmouseover="mudarImagem('<?php echo $foto_4; ?>')" onclick="mudarImagem('<?php echo $foto_4; ?>')">
+        <img src="<?php echo $foto_4; ?>" alt="Foto-do-produto">
+    </div>
+    <div class="foto-produto-comprar" data-foto="<?php echo $foto_5; ?>" onmouseover="mudarImagem('<?php echo $foto_5; ?>')" onclick="mudarImagem('<?php echo $foto_5; ?>')">
+        <img src="<?php echo $foto_5; ?>" alt="Foto-do-produto">
+    </div>
+    <div class="foto-produto-comprar" data-foto="<?php echo $foto_6; ?>" onmouseover="mudarImagem('<?php echo $foto_6; ?>')" onclick="mudarImagem('<?php echo $foto_6; ?>')">
+        <img src="<?php echo $foto_6; ?>" alt="Foto-do-produto">
+    </div>
+</div>
 
         <div class="container-foto-grande">
-            <div class="foto-grande-img"><img src="<?php echo $foto_1; ?>" alt="Foto-do-produto"></div>
+            <div class="foto-grande-img"><img id="foto-grande" src="<?php echo $foto_1; ?>" alt="Foto-do-produto"></div>
             <hr>
             <!--area container dos prdutos relacionados com fotos-->
             <div class="container-produtos-relacionados-comentarios"><!--container produtos relacionados-->
@@ -979,7 +1012,7 @@ if ($retire_dia == 1) {
                         <hr>
                             <div class="container-quem-viu-comprou">
                                 <h2 style="font-weight: 500;">Quem este produto também comprou</h2>
-                                <?php
+<?php
 // Verifica se há produtos
 if ($resultado_produtos_ultimo_visto->num_rows > 0) {
     echo "<div class='produtos-relacionados'>"; // container que segura os produtos relacionados
@@ -1667,6 +1700,87 @@ document.querySelectorAll('.chevron-toggle').forEach(chevron => {
 
 
 </script>
+
+<script>
+    function mudarImagem(foto) {
+    // Altera a imagem do elemento com id "foto-grande" para a foto clicada ou ao passar o mouse
+    document.getElementById('foto-grande').src = foto;
+}
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const imagens = document.querySelectorAll('.foto-produto23'); // Todas as divs com as imagens
+    const contadorFoto = document.getElementById('foto-atual');
+    const totalFotos = document.getElementById('total-fotos');
+    const radios = document.querySelectorAll('.container-radio input[type="radio"]');
+
+    const total = imagens.length;
+    let fotoAtual = 0;
+
+    let isChanging = false; // Variável de controle para impedir múltiplas mudanças rápidas
+
+    // Inicializa o contador de fotos
+    totalFotos.textContent = total;
+    contadorFoto.textContent = fotoAtual + 1;
+
+    // Atualiza o rádio e a foto ao clicar
+    radios.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            if (radio.checked) {
+                mudarFoto(index);
+            }
+        });
+    });
+
+    // Função para mudar a foto
+    function mudarFoto(index) {
+        if (isChanging) return; // Impede mudanças rápidas
+
+        isChanging = true; // Ativa a variável de controle
+        fotoAtual = index;
+        contadorFoto.textContent = fotoAtual + 1; // Atualiza o contador
+
+        // Atualiza a visibilidade das imagens
+        imagens.forEach((img, i) => {
+            img.style.display = (i === fotoAtual) ? 'block' : 'none'; // Exibe a foto atual
+        });
+
+        // Atualiza o rádio
+        radios.forEach((radio, i) => {
+            radio.checked = (i === fotoAtual);
+        });
+
+        // Após 300ms (duração da transição), desbloqueia a mudança de foto
+        setTimeout(() => {
+            isChanging = false;
+        }, 300);
+    }
+
+    // Função para detectar o swipe
+    let startX;
+
+    document.querySelector('.foto-mobile').addEventListener('touchstart', function(e) {
+        startX = e.changedTouches[0].screenX;
+    });
+
+    document.querySelector('.foto-mobile').addEventListener('touchend', function(e) {
+        const endX = e.changedTouches[0].screenX;
+        if (startX - endX > 50) { // Swipe para esquerda
+            fotoAtual = Math.min(fotoAtual + 1, total - 1); // Vai para a próxima foto
+        } else if (endX - startX > 50) { // Swipe para direita
+            fotoAtual = Math.max(fotoAtual - 1, 0); // Vai para a foto anterior
+        }
+        mudarFoto(fotoAtual);
+    });
+
+    // Inicializa a primeira foto
+    mudarFoto(fotoAtual);
+});
+
+
+</script>
+
 
 
 </body>
