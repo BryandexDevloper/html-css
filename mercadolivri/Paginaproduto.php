@@ -89,6 +89,12 @@ if ($resultado->num_rows > 0) {
     die("Produto não encontrado");
 }
 
+echo "<pre>";
+print_r($linha); // Isso imprime todos os dados da consulta
+echo "</pre>";
+exit;
+
+
 // Fecha a conexão
 $conn->close();
 ?>
